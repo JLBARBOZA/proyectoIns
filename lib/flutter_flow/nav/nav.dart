@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow_theme.dart';
 
 import '../../index.dart';
@@ -45,8 +46,169 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'HomePage',
           path: '/homePage',
           builder: (context, params) => HomePageWidget(),
+        ),
+        FFRoute(
+          name: 'marchamo',
+          path: '/marchamo',
+          builder: (context, params) => MarchamoWidget(),
+        ),
+        FFRoute(
+          name: 'SegurosparaPersonas',
+          path: '/segurosparaPersonas',
+          builder: (context, params) => SegurosparaPersonasWidget(),
+        ),
+        FFRoute(
+          name: 'Ingreso',
+          path: '/ingreso',
+          builder: (context, params) => IngresoWidget(),
+        ),
+        FFRoute(
+          name: 'Registrarse',
+          path: '/registrarse',
+          builder: (context, params) => RegistrarseWidget(),
+        ),
+        FFRoute(
+          name: 'actualizarContrasenna',
+          path: '/actualizarContrasenna',
+          builder: (context, params) => ActualizarContrasennaWidget(),
+        ),
+        FFRoute(
+          name: 'actualizarDatosPersonales',
+          path: '/actualizarDatosPersonales',
+          builder: (context, params) => ActualizarDatosPersonalesWidget(),
+        ),
+        FFRoute(
+          name: 'PuntosdeServicioSedes',
+          path: '/puntosdeServicioSedes',
+          builder: (context, params) => PuntosdeServicioSedesWidget(),
+        ),
+        FFRoute(
+          name: 'Comentarios',
+          path: '/comentarios',
+          builder: (context, params) => ComentariosWidget(),
+        ),
+        FFRoute(
+          name: 'Nosotros',
+          path: '/nosotros',
+          builder: (context, params) => NosotrosWidget(),
+        ),
+        FFRoute(
+          name: 'gobiernoCorporativo',
+          path: '/gobiernoCorporativo',
+          builder: (context, params) => GobiernoCorporativoWidget(),
+        ),
+        FFRoute(
+          name: 'historia',
+          path: '/historia',
+          builder: (context, params) => HistoriaWidget(),
+        ),
+        FFRoute(
+          name: 'transparencia',
+          path: '/transparencia',
+          builder: (context, params) => TransparenciaWidget(),
+        ),
+        FFRoute(
+          name: 'agentesSeguros',
+          path: '/agentesSeguros',
+          builder: (context, params) => AgentesSegurosWidget(),
+        ),
+        FFRoute(
+          name: 'contactenos',
+          path: '/contactenos',
+          builder: (context, params) => ContactenosWidget(),
+        ),
+        FFRoute(
+          name: 'corredoresSeguros',
+          path: '/corredoresSeguros',
+          builder: (context, params) => CorredoresSegurosWidget(),
+        ),
+        FFRoute(
+          name: 'operadoras',
+          path: '/operadoras',
+          builder: (context, params) => OperadorasWidget(),
+        ),
+        FFRoute(
+          name: 'sociedadesSeguros',
+          path: '/sociedadesSeguros',
+          builder: (context, params) => SociedadesSegurosWidget(),
+        ),
+        FFRoute(
+          name: 'ReservaDeCita',
+          path: '/reservaDeCita',
+          builder: (context, params) => ReservaDeCitaWidget(),
+        ),
+        FFRoute(
+          name: 'horariosDisponibles',
+          path: '/horariosDisponibles',
+          builder: (context, params) => HorariosDisponiblesWidget(),
+        ),
+        FFRoute(
+          name: 'Confirmacion',
+          path: '/confirmacion',
+          builder: (context, params) => ConfirmacionWidget(),
+        ),
+        FFRoute(
+          name: 'ReporteDeSiniestro',
+          path: '/reporteDeSiniestro',
+          builder: (context, params) => ReporteDeSiniestroWidget(),
+        ),
+        FFRoute(
+          name: 'Avaluos',
+          path: '/avaluos',
+          builder: (context, params) => AvaluosWidget(),
+        ),
+        FFRoute(
+          name: 'RedDeProveedores',
+          path: '/redDeProveedores',
+          builder: (context, params) => RedDeProveedoresWidget(),
+        ),
+        FFRoute(
+          name: 'Sedes',
+          path: '/sedes',
+          builder: (context, params) => SedesWidget(),
+        ),
+        FFRoute(
+          name: 'ServiciosP',
+          path: '/serviciosP',
+          builder: (context, params) => ServiciosPWidget(),
+        ),
+        FFRoute(
+          name: 'centrosGestion',
+          path: '/centrosGestion',
+          builder: (context, params) => CentrosGestionWidget(),
+        ),
+        FFRoute(
+          name: 'Robos',
+          path: '/robos',
+          builder: (context, params) => RobosWidget(),
+        ),
+        FFRoute(
+          name: 'Estudiantil',
+          path: '/estudiantil',
+          builder: (context, params) => EstudiantilWidget(),
+        ),
+        FFRoute(
+          name: 'Trabajo',
+          path: '/trabajo',
+          builder: (context, params) => TrabajoWidget(),
+        ),
+        FFRoute(
+          name: 'Viaje',
+          path: '/viaje',
+          builder: (context, params) => ViajeWidget(),
+        ),
+        FFRoute(
+          name: 'servicios',
+          path: '/servicios',
+          builder: (context, params) => ServiciosWidget(),
+        ),
+        FFRoute(
+          name: 'HomePageCopy',
+          path: '/homePageCopy',
+          builder: (context, params) => HomePageCopyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
+      observers: [routeObserver],
     );
 
 extension NavParamExtensions on Map<String, String?> {

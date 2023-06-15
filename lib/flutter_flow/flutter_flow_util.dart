@@ -23,6 +23,8 @@ export 'package:intl/intl.dart';
 export 'package:page_transition/page_transition.dart';
 export 'nav/nav.dart';
 
+final RouteObserver<ModalRoute> routeObserver = RouteObserver<PageRoute>();
+
 T valueOrDefault<T>(T? value, T defaultValue) =>
     (value is String && value.isEmpty) || value == null ? defaultValue : value;
 
@@ -262,4 +264,17 @@ extension FFStringExt on String {
 
 extension ListFilterExt<T> on Iterable<T?> {
   List<T> get withoutNulls => where((s) => s != null).map((e) => e!).toList();
+}
+
+extension ListDivideExt<T extends Widget> on Iterable<T> {
+  Iterable<MapEntry<int, Widget>> get enumerate => toList().asMap().entries;
+
+  List<Widget> divide(Widget t) => isEmpty
+      ? []
+      : (enumerate.map((e) => [e.value, t]).expand((i) => i).toList()
+        ..removeLast());
+
+  List<T> around(T t) => toList()
+    ..insert(0, t)
+    ..add(t);
 }
