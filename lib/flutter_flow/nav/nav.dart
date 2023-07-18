@@ -188,9 +188,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => EstudiantilWidget(),
         ),
         FFRoute(
-          name: 'Trabajo',
-          path: '/trabajo',
-          builder: (context, params) => TrabajoWidget(),
+          name: 'Medicos',
+          path: '/medicos',
+          builder: (context, params) => MedicosWidget(),
         ),
         FFRoute(
           name: 'Viaje',
@@ -206,6 +206,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'HomePageCopy',
           path: '/homePageCopy',
           builder: (context, params) => HomePageCopyWidget(),
+        ),
+        FFRoute(
+          name: 'Cotizacion',
+          path: '/cotizacion',
+          builder: (context, params) => CotizacionWidget(),
+        ),
+        FFRoute(
+          name: 'CotizacionConfirma',
+          path: '/cotizacionConfirma',
+          builder: (context, params) => CotizacionConfirmaWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],

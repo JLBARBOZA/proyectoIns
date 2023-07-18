@@ -106,7 +106,7 @@ class _FlutterFlowYoutubePlayerState extends State<FlutterFlowYoutubePlayer>
   }
 
   double get width => widget.width == null || widget.width! >= double.infinity
-      ? MediaQuery.of(context).size.width
+      ? MediaQuery.sizeOf(context).width
       : widget.width!;
 
   double get height =>

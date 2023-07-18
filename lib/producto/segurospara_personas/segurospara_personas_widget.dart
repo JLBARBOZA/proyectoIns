@@ -1,3 +1,4 @@
+import '/components/buscar_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -98,10 +99,35 @@ class _SegurosparaPersonasWidgetState extends State<SegurosparaPersonasWidget> {
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   40.0, 0.0, 0.0, 0.0),
-                              child: Icon(
-                                Icons.search,
-                                color: Colors.white,
-                                size: 24.0,
+                              child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  await showModalBottomSheet(
+                                    isScrollControlled: true,
+                                    backgroundColor: Color(0x00FFFFFF),
+                                    enableDrag: false,
+                                    context: context,
+                                    builder: (context) {
+                                      return GestureDetector(
+                                        onTap: () => FocusScope.of(context)
+                                            .requestFocus(_model.unfocusNode),
+                                        child: Padding(
+                                          padding:
+                                              MediaQuery.viewInsetsOf(context),
+                                          child: BuscarWidget(),
+                                        ),
+                                      );
+                                    },
+                                  ).then((value) => setState(() {}));
+                                },
+                                child: Icon(
+                                  Icons.search,
+                                  color: Colors.white,
+                                  size: 24.0,
+                                ),
                               ),
                             ),
                           ),
@@ -134,7 +160,7 @@ class _SegurosparaPersonasWidgetState extends State<SegurosparaPersonasWidget> {
                         alignment: AlignmentDirectional(-1.0, -1.0),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 20.0, 10.0, 0.0),
+                              0.0, 10.0, 10.0, 0.0),
                           child: Container(
                             width: 164.0,
                             height: 192.0,
@@ -194,7 +220,7 @@ class _SegurosparaPersonasWidgetState extends State<SegurosparaPersonasWidget> {
                         alignment: AlignmentDirectional(-1.0, -1.0),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 10.0, 10.0, 0.0),
+                              30.0, 10.0, 0.0, 0.0),
                           child: Container(
                             width: 164.0,
                             height: 192.0,
@@ -205,7 +231,7 @@ class _SegurosparaPersonasWidgetState extends State<SegurosparaPersonasWidget> {
                             child: Stack(
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, -1.53),
+                                  alignment: AlignmentDirectional(0.0, -0.95),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(0.0),
                                     child: Image.asset(
@@ -217,7 +243,7 @@ class _SegurosparaPersonasWidgetState extends State<SegurosparaPersonasWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 1.02),
+                                  alignment: AlignmentDirectional(0.0, 0.98),
                                   child: FFButtonWidget(
                                     onPressed: () async {
                                       context.pushNamed('Viaje');
@@ -342,7 +368,7 @@ class _SegurosparaPersonasWidgetState extends State<SegurosparaPersonasWidget> {
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),
                                   child: Image.asset(
-                                    'assets/images/trabajador.png',
+                                    'assets/images/doctor.png',
                                     width: 300.0,
                                     height: 154.0,
                                     fit: BoxFit.fill,
@@ -352,9 +378,9 @@ class _SegurosparaPersonasWidgetState extends State<SegurosparaPersonasWidget> {
                                   alignment: AlignmentDirectional(0.03, 1.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
-                                      context.pushNamed('Trabajo');
+                                      context.pushNamed('Medicos');
                                     },
-                                    text: 'Trabajo',
+                                    text: 'Gastos Médicos ',
                                     options: FFButtonOptions(
                                       width: 171.0,
                                       height: 40.0,
@@ -381,6 +407,82 @@ class _SegurosparaPersonasWidgetState extends State<SegurosparaPersonasWidget> {
                                   ),
                                 ),
                               ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(0.0, 0.0),
+                child: Padding(
+                  padding:
+                      EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Flexible(
+                        child: Align(
+                          alignment: AlignmentDirectional(0.0, 0.0),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 10.0, 0.0, 0.0),
+                            child: Container(
+                              width: 164.0,
+                              height: 192.0,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                              ),
+                              alignment: AlignmentDirectional(0.0, 0.0),
+                              child: Stack(
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(0.0),
+                                    child: Image.asset(
+                                      'assets/images/cotizacion.png',
+                                      width: 300.0,
+                                      height: 154.0,
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment: AlignmentDirectional(0.03, 1.0),
+                                    child: FFButtonWidget(
+                                      onPressed: () async {
+                                        context.pushNamed('Cotizacion');
+                                      },
+                                      text: 'Cotización',
+                                      options: FFButtonOptions(
+                                        width: 171.0,
+                                        height: 40.0,
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            24.0, 0.0, 24.0, 0.0),
+                                        iconPadding:
+                                            EdgeInsetsDirectional.fromSTEB(
+                                                0.0, 0.0, 0.0, 0.0),
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
+                                        textStyle: FlutterFlowTheme.of(context)
+                                            .titleSmall
+                                            .override(
+                                              fontFamily: 'Readex Pro',
+                                              color: Colors.white,
+                                            ),
+                                        elevation: 3.0,
+                                        borderSide: BorderSide(
+                                          color: Colors.transparent,
+                                          width: 1.0,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
