@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow_theme.dart';
+import '/backend/backend.dart';
 
 import '../../index.dart';
 import '../../main.dart';
@@ -123,19 +124,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => CorredoresSegurosWidget(),
         ),
         FFRoute(
-          name: 'operadoras',
-          path: '/operadoras',
-          builder: (context, params) => OperadorasWidget(),
-        ),
-        FFRoute(
           name: 'sociedadesSeguros',
           path: '/sociedadesSeguros',
           builder: (context, params) => SociedadesSegurosWidget(),
         ),
         FFRoute(
-          name: 'ReservaDeCita',
-          path: '/reservaDeCita',
-          builder: (context, params) => ReservaDeCitaWidget(),
+          name: 'ReservaCita',
+          path: '/reservaCita',
+          builder: (context, params) => ReservaCitaWidget(),
         ),
         FFRoute(
           name: 'horariosDisponibles',
@@ -148,19 +144,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => ConfirmacionWidget(),
         ),
         FFRoute(
-          name: 'ReporteDeSiniestro',
-          path: '/reporteDeSiniestro',
-          builder: (context, params) => ReporteDeSiniestroWidget(),
+          name: 'ReporteSiniestro',
+          path: '/reporteSiniestro',
+          builder: (context, params) => ReporteSiniestroWidget(),
         ),
         FFRoute(
           name: 'Avaluos',
           path: '/avaluos',
           builder: (context, params) => AvaluosWidget(),
-        ),
-        FFRoute(
-          name: 'RedDeProveedores',
-          path: '/redDeProveedores',
-          builder: (context, params) => RedDeProveedoresWidget(),
         ),
         FFRoute(
           name: 'Sedes',
@@ -216,6 +207,37 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'CotizacionConfirma',
           path: '/cotizacionConfirma',
           builder: (context, params) => CotizacionConfirmaWidget(),
+        ),
+        FFRoute(
+          name: 'puntosYSedesMenu',
+          path: '/puntosYSedesMenu',
+          builder: (context, params) => PuntosYSedesMenuWidget(),
+        ),
+        FFRoute(
+          name: 'datosSP',
+          path: '/datosSP',
+          builder: (context, params) => DatosSPWidget(
+            categoria: params.getParam('categoria', ParamType.DocumentReference,
+                false, ['sedes_menu']),
+          ),
+        ),
+        FFRoute(
+          name: 'RedProveedores',
+          path: '/redProveedores',
+          builder: (context, params) => RedProveedoresWidget(),
+        ),
+        FFRoute(
+          name: 'agentesProvincias',
+          path: '/agentesProvincias',
+          builder: (context, params) => AgentesProvinciasWidget(
+            provincia: params.getParam('provincia', ParamType.DocumentReference,
+                false, ['agentesProvincias']),
+          ),
+        ),
+        FFRoute(
+          name: 'operadoresSeguros',
+          path: '/operadoresSeguros',
+          builder: (context, params) => OperadoresSegurosWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
@@ -288,6 +310,7 @@ class FFParameters {
     String paramName,
     ParamType type, [
     bool isList = false,
+    List<String>? collectionNamePath,
   ]) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -301,11 +324,8 @@ class FFParameters {
       return param;
     }
     // Return serialized value.
-    return deserializeParam<T>(
-      param,
-      type,
-      isList,
-    );
+    return deserializeParam<T>(param, type, isList,
+        collectionNamePath: collectionNamePath);
   }
 }
 

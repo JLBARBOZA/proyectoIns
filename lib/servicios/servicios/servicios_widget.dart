@@ -129,7 +129,7 @@ class _ServiciosWidgetState extends State<ServiciosWidget> {
                       ),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          context.pushNamed('ReservaDeCita');
+                          context.pushNamed('ReservaCita');
                         },
                         text: 'Reserve su Cita',
                         options: FFButtonOptions(
@@ -213,7 +213,7 @@ class _ServiciosWidgetState extends State<ServiciosWidget> {
                       ),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          context.pushNamed('RedDeProveedores');
+                          context.pushNamed('RedProveedores');
                         },
                         text: 'Red de Proveedores',
                         options: FFButtonOptions(
@@ -255,51 +255,9 @@ class _ServiciosWidgetState extends State<ServiciosWidget> {
                       ),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          context.pushNamed('ReporteDeSiniestro');
+                          context.pushNamed('ReporteSiniestro');
                         },
                         text: 'Reporte de Siniestro',
-                        options: FFButtonOptions(
-                          height: 40.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              24.0, 0.0, 24.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
-                          color: FlutterFlowTheme.of(context).info,
-                          textStyle:
-                              FlutterFlowTheme.of(context).titleSmall.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.white,
-                                    fontSize: 25.0,
-                                  ),
-                          elevation: 3.0,
-                          borderSide: BorderSide(
-                            color: Colors.transparent,
-                            width: 1.0,
-                          ),
-                          borderRadius: BorderRadius.circular(30.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: Align(
-                  alignment: AlignmentDirectional(0.0, -1.0),
-                  child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 15.0),
-                    child: Container(
-                      width: MediaQuery.sizeOf(context).width * 1.0,
-                      height: 100.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                      ),
-                      child: FFButtonWidget(
-                        onPressed: () async {
-                          context.pushNamed('horariosDisponibles');
-                        },
-                        text: 'Horarios Disponibles',
                         options: FFButtonOptions(
                           height: 40.0,
                           padding: EdgeInsetsDirectional.fromSTEB(

@@ -6,26 +6,25 @@ import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'reporte_de_siniestro_model.dart';
-export 'reporte_de_siniestro_model.dart';
+import 'reporte_siniestro_model.dart';
+export 'reporte_siniestro_model.dart';
 
-class ReporteDeSiniestroWidget extends StatefulWidget {
-  const ReporteDeSiniestroWidget({Key? key}) : super(key: key);
+class ReporteSiniestroWidget extends StatefulWidget {
+  const ReporteSiniestroWidget({Key? key}) : super(key: key);
 
   @override
-  _ReporteDeSiniestroWidgetState createState() =>
-      _ReporteDeSiniestroWidgetState();
+  _ReporteSiniestroWidgetState createState() => _ReporteSiniestroWidgetState();
 }
 
-class _ReporteDeSiniestroWidgetState extends State<ReporteDeSiniestroWidget> {
-  late ReporteDeSiniestroModel _model;
+class _ReporteSiniestroWidgetState extends State<ReporteSiniestroWidget> {
+  late ReporteSiniestroModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ReporteDeSiniestroModel());
+    _model = createModel(context, () => ReporteSiniestroModel());
 
     _model.textController1 ??= TextEditingController();
     _model.textController2 ??= TextEditingController();

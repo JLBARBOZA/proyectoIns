@@ -183,7 +183,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       ),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          context.pushNamed('PuntosdeServicioSedes');
+                          context.pushNamed('puntosYSedesMenu');
                         },
                         text: 'Sedes y Puntos de Servicios',
                         options: FFButtonOptions(

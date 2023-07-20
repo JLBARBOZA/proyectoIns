@@ -166,7 +166,7 @@ class _RobosWidgetState extends State<RobosWidget> {
                           EdgeInsetsDirectional.fromSTEB(15.0, 5.0, 0.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          context.pushNamed('ReservaDeCita');
+                          context.pushNamed('ReservaCita');
                         },
                         text: 'Reservar Cita',
                         options: FFButtonOptions(

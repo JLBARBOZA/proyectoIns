@@ -66,7 +66,7 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
                       fontFamily: 'Outfit',
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 25.0,
                     ),
               ),
@@ -86,7 +86,7 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                   alignment: AlignmentDirectional(0.0, -1.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
+                        EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 15.0),
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: 100.0,
@@ -97,7 +97,7 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                         onPressed: () async {
                           context.pushNamed('agentesSeguros');
                         },
-                        text: 'Agentes de Seguros',
+                        text: 'Agentes de seguros',
                         options: FFButtonOptions(
                           height: 40.0,
                           padding: EdgeInsetsDirectional.fromSTEB(
@@ -128,7 +128,7 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                   alignment: AlignmentDirectional(0.0, -1.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
+                        EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 15.0),
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: 100.0,
@@ -139,7 +139,7 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                         onPressed: () async {
                           context.pushNamed('corredoresSeguros');
                         },
-                        text: 'Corredores de Seguros',
+                        text: 'Corredores de seguros',
                         options: FFButtonOptions(
                           height: 40.0,
                           padding: EdgeInsetsDirectional.fromSTEB(
@@ -170,7 +170,7 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                   alignment: AlignmentDirectional(0.0, -1.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
+                        EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 15.0),
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: 100.0,
@@ -179,14 +179,13 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                       ),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          context.pushNamed('operadoras');
+                          context.pushNamed('operadoresSeguros');
                         },
-                        text: 'Operadores de Seguros Autoexpedibles',
+                        text: 'Operadores autoexpedibles',
                         options: FFButtonOptions(
-                          width: 459.0,
                           height: 40.0,
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
+                              24.0, 0.0, 24.0, 0.0),
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).info,
@@ -213,7 +212,7 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                   alignment: AlignmentDirectional(0.0, -1.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
+                        EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 15.0),
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: 100.0,
@@ -224,12 +223,11 @@ class _ContactenosWidgetState extends State<ContactenosWidget> {
                         onPressed: () async {
                           context.pushNamed('sociedadesSeguros');
                         },
-                        text: 'Sociedades Agencias de Seguros',
+                        text: 'Sociedades agencias',
                         options: FFButtonOptions(
-                          width: 459.0,
                           height: 40.0,
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 0.0),
+                              24.0, 0.0, 24.0, 0.0),
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).info,

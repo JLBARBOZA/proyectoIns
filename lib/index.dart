@@ -26,20 +26,17 @@ export '/contactenos/contactenos/contactenos_widget.dart'
     show ContactenosWidget;
 export '/contactenos/corredores_seguros/corredores_seguros_widget.dart'
     show CorredoresSegurosWidget;
-export '/contactenos/operadoras/operadoras_widget.dart' show OperadorasWidget;
 export '/contactenos/sociedades_seguros/sociedades_seguros_widget.dart'
     show SociedadesSegurosWidget;
-export '/servicios/reserva_de_cita/reserva_de_cita_widget.dart'
-    show ReservaDeCitaWidget;
+export '/servicios/reserva_cita/reserva_cita_widget.dart'
+    show ReservaCitaWidget;
 export '/servicios/horarios_disponibles/horarios_disponibles_widget.dart'
     show HorariosDisponiblesWidget;
 export '/servicios/confirmacion/confirmacion_widget.dart'
     show ConfirmacionWidget;
-export '/servicios/reporte_de_siniestro/reporte_de_siniestro_widget.dart'
-    show ReporteDeSiniestroWidget;
+export '/servicios/reporte_siniestro/reporte_siniestro_widget.dart'
+    show ReporteSiniestroWidget;
 export '/servicios/avaluos/avaluos_widget.dart' show AvaluosWidget;
-export '/servicios/red_de_proveedores/red_de_proveedores_widget.dart'
-    show RedDeProveedoresWidget;
 export '/sedes_puntosde_acceso/sedes/sedes_widget.dart' show SedesWidget;
 export '/sedes_puntosde_acceso/servicios_p/servicios_p_widget.dart'
     show ServiciosPWidget;
@@ -55,3 +52,13 @@ export '/listado_funciones/home_page_copy/home_page_copy_widget.dart'
 export '/producto/cotizacion/cotizacion_widget.dart' show CotizacionWidget;
 export '/producto/cotizacion_confirma/cotizacion_confirma_widget.dart'
     show CotizacionConfirmaWidget;
+export '/sedes_puntosde_acceso/puntos_y_sedes_menu/puntos_y_sedes_menu_widget.dart'
+    show PuntosYSedesMenuWidget;
+export '/sedes_puntosde_acceso/datos_s_p/datos_s_p_widget.dart'
+    show DatosSPWidget;
+export '/servicios/red_proveedores/red_proveedores_widget.dart'
+    show RedProveedoresWidget;
+export '/contactenos/agentes_provincias/agentes_provincias_widget.dart'
+    show AgentesProvinciasWidget;
+export '/contactenos/operadores_seguros/operadores_seguros_widget.dart'
+    show OperadoresSegurosWidget;
