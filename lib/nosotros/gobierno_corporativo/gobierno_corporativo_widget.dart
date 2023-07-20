@@ -44,6 +44,20 @@ class _GobiernoCorporativoWidgetState extends State<GobiernoCorporativoWidget> {
           backgroundColor: FlutterFlowTheme.of(context).primary,
           iconTheme: IconThemeData(color: Colors.white),
           automaticallyImplyLeading: true,
+          leading: InkWell(
+            splashColor: Colors.transparent,
+            focusColor: Colors.transparent,
+            hoverColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            onTap: () async {
+              context.pushNamed('Nosotros');
+            },
+            child: Icon(
+              Icons.arrow_back,
+              color: Colors.white,
+              size: 24.0,
+            ),
+          ),
           title: Align(
             alignment: AlignmentDirectional(0.0, 0.0),
             child: Padding(

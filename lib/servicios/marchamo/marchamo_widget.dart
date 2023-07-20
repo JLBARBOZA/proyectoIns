@@ -39,6 +39,27 @@ class _MarchamoWidgetState extends State<MarchamoWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        appBar: AppBar(
+          backgroundColor: FlutterFlowTheme.of(context).primary,
+          automaticallyImplyLeading: true,
+          leading: InkWell(
+            splashColor: Colors.transparent,
+            focusColor: Colors.transparent,
+            hoverColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            onTap: () async {
+              context.safePop();
+            },
+            child: Icon(
+              Icons.arrow_back,
+              color: Colors.white,
+              size: 24.0,
+            ),
+          ),
+          actions: [],
+          centerTitle: true,
+          elevation: 4.0,
+        ),
         body: SafeArea(
           top: true,
           child: FlutterFlowWebView(

@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -68,7 +69,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               hoverColor: Colors.transparent,
               highlightColor: Colors.transparent,
               onTap: () async {
-                context.pushNamed('Ingreso');
+                GoRouter.of(context).prepareAuthEvent();
+                await authManager.signOut();
+                GoRouter.of(context).clearRedirectLocation();
+
+                context.goNamedAuth('Ingreso', context.mounted);
               },
               child: Icon(
                 Icons.person_rounded,

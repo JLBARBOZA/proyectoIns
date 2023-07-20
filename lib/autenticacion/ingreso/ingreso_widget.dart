@@ -1,8 +1,12 @@
+import '/auth/firebase_auth/auth_util.dart';
+import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'ingreso_model.dart';
@@ -15,10 +19,26 @@ class IngresoWidget extends StatefulWidget {
   _IngresoWidgetState createState() => _IngresoWidgetState();
 }
 
-class _IngresoWidgetState extends State<IngresoWidget> {
+class _IngresoWidgetState extends State<IngresoWidget>
+    with TickerProviderStateMixin {
   late IngresoModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final animationsMap = {
+    'imageOnPageLoadAnimation': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        RotateEffect(
+          curve: Curves.easeInOut,
+          delay: 600.ms,
+          duration: 1000.ms,
+          begin: 0.0,
+          end: 1.0,
+        ),
+      ],
+    ),
+  };
 
   @override
   void initState() {
@@ -77,16 +97,19 @@ class _IngresoWidgetState extends State<IngresoWidget> {
                           alignment: AlignmentDirectional(-1.0, 0.0),
                           child: Align(
                             alignment: AlignmentDirectional(0.0, 0.0),
-                            child: Text(
-                              'Grupo INS',
-                              style: FlutterFlowTheme.of(context)
-                                  .displaySmall
-                                  .override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    color: Color(0xFF101213),
-                                    fontSize: 36.0,
-                                    fontWeight: FontWeight.w600,
-                                  ),
+                            child: Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 15.0, 0.0, 0.0),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(8.0),
+                                child: Image.asset(
+                                  'assets/images/Ins_logo.jpg',
+                                  width: 300.0,
+                                  height: 200.0,
+                                  fit: BoxFit.contain,
+                                ),
+                              ).animateOnPageLoad(
+                                  animationsMap['imageOnPageLoadAnimation']!),
                             ),
                           ),
                         ),
@@ -136,7 +159,7 @@ class _IngresoWidgetState extends State<IngresoWidget> {
                                       autofillHints: [AutofillHints.email],
                                       obscureText: false,
                                       decoration: InputDecoration(
-                                        labelText: 'Email',
+                                        labelText: 'Correo Electronico',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
@@ -206,7 +229,7 @@ class _IngresoWidgetState extends State<IngresoWidget> {
                                       autofillHints: [AutofillHints.password],
                                       obscureText: !_model.passwordVisibility,
                                       decoration: InputDecoration(
-                                        labelText: 'Password',
+                                        labelText: 'Contraseña',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
@@ -284,16 +307,20 @@ class _IngresoWidgetState extends State<IngresoWidget> {
                                       0.0, 0.0, 0.0, 16.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
-                                      context.pushNamed(
-                                        'HomePageCopy',
-                                        extra: <String, dynamic>{
-                                          kTransitionInfoKey: TransitionInfo(
-                                            hasTransition: true,
-                                            transitionType:
-                                                PageTransitionType.rightToLeft,
-                                          ),
-                                        },
+                                      GoRouter.of(context).prepareAuthEvent();
+
+                                      final user =
+                                          await authManager.signInWithEmail(
+                                        context,
+                                        _model.emailAddressController.text,
+                                        _model.passwordController.text,
                                       );
+                                      if (user == null) {
+                                        return;
+                                      }
+
+                                      context.goNamedAuth(
+                                          'HomePage', context.mounted);
                                     },
                                     text: 'Ingresar',
                                     options: FFButtonOptions(
@@ -334,7 +361,18 @@ class _IngresoWidgetState extends State<IngresoWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      context.pushNamed('Registrarse');
+                                      context.pushNamed(
+                                        'Authenticate',
+                                        extra: <String, dynamic>{
+                                          kTransitionInfoKey: TransitionInfo(
+                                            hasTransition: true,
+                                            transitionType:
+                                                PageTransitionType.rightToLeft,
+                                            duration:
+                                                Duration(milliseconds: 1000),
+                                          ),
+                                        },
+                                      );
                                     },
                                     child: RichText(
                                       text: TextSpan(

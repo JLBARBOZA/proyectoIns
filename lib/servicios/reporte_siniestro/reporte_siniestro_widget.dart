@@ -49,6 +49,20 @@ class _ReporteSiniestroWidgetState extends State<ReporteSiniestroWidget> {
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
+          leading: InkWell(
+            splashColor: Colors.transparent,
+            focusColor: Colors.transparent,
+            hoverColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            onTap: () async {
+              context.safePop();
+            },
+            child: Icon(
+              Icons.arrow_back,
+              color: Colors.white,
+              size: 24.0,
+            ),
+          ),
           title: Text(
             'Reporte de Siniestro o Accidente',
             style: FlutterFlowTheme.of(context).headlineMedium.override(

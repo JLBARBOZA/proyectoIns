@@ -239,7 +239,7 @@ class _AgentesProvinciasWidgetState extends State<AgentesProvinciasWidget> {
                                                             MediaQuery.sizeOf(
                                                                         context)
                                                                     .height *
-                                                                0.75,
+                                                                1.0,
                                                         child:
                                                             BsAgentesProvinciasWidget(
                                                           infoAgentes:

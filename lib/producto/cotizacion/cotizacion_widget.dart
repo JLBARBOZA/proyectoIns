@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart'
+    as smooth_page_indicator;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -29,6 +31,7 @@ class _CotizacionWidgetState extends State<CotizacionWidget> {
     _model.textController3 ??= TextEditingController();
     _model.textController4 ??= TextEditingController();
     _model.textController5 ??= TextEditingController();
+    _model.textController6 ??= TextEditingController();
   }
 
   @override
@@ -486,63 +489,163 @@ class _CotizacionWidgetState extends State<CotizacionWidget> {
                   ),
                 ],
               ),
-              Column(
+              Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Expanded(
-                            child: Theme(
-                              data: ThemeData(
-                                checkboxTheme: CheckboxThemeData(
-                                  visualDensity: VisualDensity.compact,
-                                  materialTapTargetSize:
-                                      MaterialTapTargetSize.shrinkWrap,
-                                ),
-                                unselectedWidgetColor:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                              ),
-                              child: CheckboxListTile(
-                                value: _model.checkboxListTileValue ??= false,
-                                onChanged: (newValue) async {
-                                  setState(() =>
-                                      _model.checkboxListTileValue = newValue!);
-                                },
-                                subtitle: Text(
-                                  'S',
-                                  style:
-                                      FlutterFlowTheme.of(context).labelMedium,
-                                ),
-                                tileColor: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
-                                activeColor:
-                                    FlutterFlowTheme.of(context).primary,
-                                checkColor: FlutterFlowTheme.of(context).info,
-                                dense: false,
-                                controlAffinity:
-                                    ListTileControlAffinity.trailing,
-                              ),
+                  Expanded(
+                    child: Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                      child: TextFormField(
+                        controller: _model.textController6,
+                        autofocus: true,
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          labelText: 'Digite el seguro que desea cotizar',
+                          labelStyle: FlutterFlowTheme.of(context).labelMedium,
+                          hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).alternate,
+                              width: 2.0,
                             ),
+                            borderRadius: BorderRadius.circular(8.0),
                           ),
-                        ],
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).primary,
+                              width: 2.0,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          errorBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).error,
+                              width: 2.0,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          focusedErrorBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).error,
+                              width: 2.0,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyMedium,
+                        validator: _model.textController6Validator
+                            .asValidator(context),
                       ),
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [],
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Expanded(
+                    child: Align(
+                      alignment: AlignmentDirectional(0.0, 0.0),
+                      child: Container(
+                        width: 309.0,
+                        height: 140.0,
+                        decoration: BoxDecoration(
+                          color:
+                              FlutterFlowTheme.of(context).secondaryBackground,
+                        ),
+                        child: Container(
+                          width: double.infinity,
+                          height: 500.0,
+                          child: Stack(
+                            children: [
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 40.0),
+                                child: PageView(
+                                  controller: _model.pageViewController ??=
+                                      PageController(initialPage: 0),
+                                  scrollDirection: Axis.horizontal,
+                                  children: [
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(8.0),
+                                      child: Image.asset(
+                                        'assets/images/doctor.png',
+                                        width: 300.0,
+                                        height: 200.0,
+                                        fit: BoxFit.contain,
+                                      ),
+                                    ),
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(8.0),
+                                      child: Image.asset(
+                                        'assets/images/viajero.png',
+                                        width: 300.0,
+                                        height: 200.0,
+                                        fit: BoxFit.contain,
+                                      ),
+                                    ),
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(8.0),
+                                      child: Image.asset(
+                                        'assets/images/robo.png',
+                                        width: 300.0,
+                                        height: 200.0,
+                                        fit: BoxFit.contain,
+                                      ),
+                                    ),
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(8.0),
+                                      child: Image.asset(
+                                        'assets/images/graduado.png',
+                                        width: 300.0,
+                                        height: 200.0,
+                                        fit: BoxFit.contain,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Align(
+                                alignment: AlignmentDirectional(-1.0, 1.0),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      16.0, 0.0, 0.0, 16.0),
+                                  child:
+                                      smooth_page_indicator.SmoothPageIndicator(
+                                    controller: _model.pageViewController ??=
+                                        PageController(initialPage: 0),
+                                    count: 4,
+                                    axisDirection: Axis.horizontal,
+                                    onDotClicked: (i) async {
+                                      await _model.pageViewController!
+                                          .animateToPage(
+                                        i,
+                                        duration: Duration(milliseconds: 500),
+                                        curve: Curves.ease,
+                                      );
+                                    },
+                                    effect: smooth_page_indicator
+                                        .ExpandingDotsEffect(
+                                      expansionFactor: 3.0,
+                                      spacing: 8.0,
+                                      radius: 16.0,
+                                      dotWidth: 16.0,
+                                      dotHeight: 8.0,
+                                      dotColor:
+                                          FlutterFlowTheme.of(context).tertiary,
+                                      activeDotColor:
+                                          FlutterFlowTheme.of(context).primary,
+                                      paintStyle: PaintingStyle.fill,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [],
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [],
-                      ),
-                    ],
+                    ),
                   ),
                 ],
               ),

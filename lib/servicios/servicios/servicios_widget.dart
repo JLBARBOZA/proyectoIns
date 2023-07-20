@@ -48,7 +48,7 @@ class _ServiciosWidgetState extends State<ServiciosWidget> {
             hoverColor: Colors.transparent,
             highlightColor: Colors.transparent,
             onTap: () async {
-              context.safePop();
+              context.pushNamed('HomePage');
             },
             child: Icon(
               Icons.arrow_back,

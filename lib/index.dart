@@ -10,8 +10,6 @@ export '/autenticacion/actualizar_contrasenna/actualizar_contrasenna_widget.dart
     show ActualizarContrasennaWidget;
 export '/autenticacion/actualizar_datos_personales/actualizar_datos_personales_widget.dart'
     show ActualizarDatosPersonalesWidget;
-export '/sedes_puntosde_acceso/puntosde_servicio_sedes/puntosde_servicio_sedes_widget.dart'
-    show PuntosdeServicioSedesWidget;
 export '/comentarios/comentarios/comentarios_widget.dart'
     show ComentariosWidget;
 export '/nosotros/nosotros/nosotros_widget.dart' show NosotrosWidget;
@@ -37,11 +35,6 @@ export '/servicios/confirmacion/confirmacion_widget.dart'
 export '/servicios/reporte_siniestro/reporte_siniestro_widget.dart'
     show ReporteSiniestroWidget;
 export '/servicios/avaluos/avaluos_widget.dart' show AvaluosWidget;
-export '/sedes_puntosde_acceso/sedes/sedes_widget.dart' show SedesWidget;
-export '/sedes_puntosde_acceso/servicios_p/servicios_p_widget.dart'
-    show ServiciosPWidget;
-export '/sedes_puntosde_acceso/centros_gestion/centros_gestion_widget.dart'
-    show CentrosGestionWidget;
 export '/producto/robos/robos_widget.dart' show RobosWidget;
 export '/producto/estudiantil/estudiantil_widget.dart' show EstudiantilWidget;
 export '/producto/medicos/medicos_widget.dart' show MedicosWidget;
@@ -62,3 +55,5 @@ export '/contactenos/agentes_provincias/agentes_provincias_widget.dart'
     show AgentesProvinciasWidget;
 export '/contactenos/operadores_seguros/operadores_seguros_widget.dart'
     show OperadoresSegurosWidget;
+export '/autenticacion/authenticate/authenticate_widget.dart'
+    show AuthenticateWidget;

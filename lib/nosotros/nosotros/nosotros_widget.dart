@@ -49,7 +49,7 @@ class _NosotrosWidgetState extends State<NosotrosWidget> {
             hoverColor: Colors.transparent,
             highlightColor: Colors.transparent,
             onTap: () async {
-              context.safePop();
+              context.pushNamed('HomePage');
             },
             child: Icon(
               Icons.arrow_back,

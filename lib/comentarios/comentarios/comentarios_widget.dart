@@ -70,10 +70,19 @@ class _ComentariosWidgetState extends State<ComentariosWidget> {
           actions: [
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 0.0),
-              child: Icon(
-                Icons.chevron_left_outlined,
-                color: Colors.white,
-                size: 35.0,
+              child: InkWell(
+                splashColor: Colors.transparent,
+                focusColor: Colors.transparent,
+                hoverColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+                onTap: () async {
+                  context.pushNamed('HomePage');
+                },
+                child: Icon(
+                  Icons.chevron_left_outlined,
+                  color: Colors.white,
+                  size: 35.0,
+                ),
               ),
             ),
           ],

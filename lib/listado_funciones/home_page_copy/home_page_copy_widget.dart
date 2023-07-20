@@ -183,7 +183,7 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
                       ),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          context.pushNamed('PuntosdeServicioSedes');
+                          context.pushNamed('puntosYSedesMenu');
                         },
                         text: 'Sedes y Puntos de Servicios',
                         options: FFButtonOptions(
