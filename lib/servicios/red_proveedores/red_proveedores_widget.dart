@@ -38,28 +38,7 @@ class _RedProveedoresWidgetState extends State<RedProveedoresWidget> {
       onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primary,
-          automaticallyImplyLeading: true,
-          leading: InkWell(
-            splashColor: Colors.transparent,
-            focusColor: Colors.transparent,
-            hoverColor: Colors.transparent,
-            highlightColor: Colors.transparent,
-            onTap: () async {
-              context.safePop();
-            },
-            child: Icon(
-              Icons.arrow_back,
-              color: Colors.white,
-              size: 24.0,
-            ),
-          ),
-          actions: [],
-          centerTitle: true,
-          elevation: 4.0,
-        ),
+        backgroundColor: Colors.black,
         body: SafeArea(
           top: true,
           child: Column(
@@ -69,8 +48,8 @@ class _RedProveedoresWidgetState extends State<RedProveedoresWidget> {
                 content:
                     'https://sevins.ins-cr.com/INS_DIGITAL/proveedores/proveedores.aspx',
                 bypass: false,
-                width: 390.0,
-                height: 844.0,
+                width: MediaQuery.sizeOf(context).width * 1.0,
+                height: MediaQuery.sizeOf(context).height * 1.0,
                 verticalScroll: false,
                 horizontalScroll: false,
               ),

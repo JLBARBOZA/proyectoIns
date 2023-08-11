@@ -3,16 +3,16 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow_theme.dart';
 import '/backend/backend.dart';
 
 import '../../auth/base_auth_user_provider.dart';
 
-import '../../index.dart';
-import '../../main.dart';
-import '../lat_lng.dart';
-import '../place.dart';
+import '/index.dart';
+import '/main.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/lat_lng.dart';
+import '/flutter_flow/place.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
@@ -167,31 +167,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => SociedadesSegurosWidget(),
         ),
         FFRoute(
-          name: 'ReservaCita',
-          path: '/reservaCita',
-          builder: (context, params) => ReservaCitaWidget(),
-        ),
-        FFRoute(
-          name: 'horariosDisponibles',
-          path: '/horariosDisponibles',
-          builder: (context, params) => HorariosDisponiblesWidget(),
-        ),
-        FFRoute(
-          name: 'Confirmacion',
-          path: '/confirmacion',
-          builder: (context, params) => ConfirmacionWidget(),
-        ),
-        FFRoute(
-          name: 'ReporteSiniestro',
-          path: '/reporteSiniestro',
-          builder: (context, params) => ReporteSiniestroWidget(),
-        ),
-        FFRoute(
-          name: 'Avaluos',
-          path: '/avaluos',
-          builder: (context, params) => AvaluosWidget(),
-        ),
-        FFRoute(
           name: 'Robos',
           path: '/robos',
           builder: (context, params) => RobosWidget(),
@@ -266,6 +241,21 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Authenticate',
           path: '/authenticate',
           builder: (context, params) => AuthenticateWidget(),
+        ),
+        FFRoute(
+          name: 'ReservaCita',
+          path: '/reservaCita',
+          builder: (context, params) => ReservaCitaWidget(),
+        ),
+        FFRoute(
+          name: 'ReporteSiniestro',
+          path: '/reporteSiniestro',
+          builder: (context, params) => ReporteSiniestroWidget(),
+        ),
+        FFRoute(
+          name: 'Avaluos',
+          path: '/avaluos',
+          builder: (context, params) => AvaluosWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],

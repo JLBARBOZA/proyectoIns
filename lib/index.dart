@@ -26,15 +26,6 @@ export '/contactenos/corredores_seguros/corredores_seguros_widget.dart'
     show CorredoresSegurosWidget;
 export '/contactenos/sociedades_seguros/sociedades_seguros_widget.dart'
     show SociedadesSegurosWidget;
-export '/servicios/reserva_cita/reserva_cita_widget.dart'
-    show ReservaCitaWidget;
-export '/servicios/horarios_disponibles/horarios_disponibles_widget.dart'
-    show HorariosDisponiblesWidget;
-export '/servicios/confirmacion/confirmacion_widget.dart'
-    show ConfirmacionWidget;
-export '/servicios/reporte_siniestro/reporte_siniestro_widget.dart'
-    show ReporteSiniestroWidget;
-export '/servicios/avaluos/avaluos_widget.dart' show AvaluosWidget;
 export '/producto/robos/robos_widget.dart' show RobosWidget;
 export '/producto/estudiantil/estudiantil_widget.dart' show EstudiantilWidget;
 export '/producto/medicos/medicos_widget.dart' show MedicosWidget;
@@ -57,3 +48,8 @@ export '/contactenos/operadores_seguros/operadores_seguros_widget.dart'
     show OperadoresSegurosWidget;
 export '/autenticacion/authenticate/authenticate_widget.dart'
     show AuthenticateWidget;
+export '/servicios/reserva_cita/reserva_cita_widget.dart'
+    show ReservaCitaWidget;
+export '/servicios/reporte_siniestro/reporte_siniestro_widget.dart'
+    show ReporteSiniestroWidget;
+export '/servicios/avaluos/avaluos_widget.dart' show AvaluosWidget;

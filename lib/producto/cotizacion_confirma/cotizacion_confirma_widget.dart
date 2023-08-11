@@ -69,7 +69,7 @@ class _CotizacionConfirmaWidgetState extends State<CotizacionConfirmaWidget> {
                 'Cotización exitosa!',
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
                       fontFamily: 'Outfit',
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 32.0,
                       fontWeight: FontWeight.w500,
                     ),
@@ -95,10 +95,10 @@ class _CotizacionConfirmaWidgetState extends State<CotizacionConfirmaWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     iconPadding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: Colors.white,
+                    color: Colors.black,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Outfit',
-                          color: Color(0xFF39D2C0),
+                          color: FlutterFlowTheme.of(context).primaryBtnText,
                           fontSize: 16.0,
                           fontWeight: FontWeight.normal,
                         ),
