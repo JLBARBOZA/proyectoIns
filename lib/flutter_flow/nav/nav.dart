@@ -78,31 +78,23 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? NavBarPage() : IngresoWidget(),
+          appStateNotifier.loggedIn ? HomePageWidget() : IngresoWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? NavBarPage() : IngresoWidget(),
+              appStateNotifier.loggedIn ? HomePageWidget() : IngresoWidget(),
         ),
         FFRoute(
           name: 'HomePage',
           path: '/homePage',
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'HomePage')
-              : NavBarPage(
-                  initialPage: 'HomePage',
-                  page: HomePageWidget(),
-                ),
+          builder: (context, params) => HomePageWidget(),
         ),
         FFRoute(
           name: 'marchamo',
           path: '/marchamo',
-          builder: (context, params) => NavBarPage(
-            initialPage: '',
-            page: MarchamoWidget(),
-          ),
+          builder: (context, params) => MarchamoWidget(),
         ),
         FFRoute(
           name: 'SegurosparaPersonas',
@@ -197,12 +189,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'servicios',
           path: '/servicios',
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'servicios')
-              : NavBarPage(
-                  initialPage: 'servicios',
-                  page: ServiciosWidget(),
-                ),
+          builder: (context, params) => ServiciosWidget(),
         ),
         FFRoute(
           name: 'HomePageCopy',
@@ -235,10 +222,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'RedProveedores',
           path: '/redProveedores',
-          builder: (context, params) => NavBarPage(
-            initialPage: '',
-            page: RedProveedoresWidget(),
-          ),
+          builder: (context, params) => RedProveedoresWidget(),
         ),
         FFRoute(
           name: 'agentesProvincias',
@@ -261,34 +245,22 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'ReservaCita',
           path: '/reservaCita',
-          builder: (context, params) => NavBarPage(
-            initialPage: '',
-            page: ReservaCitaWidget(),
-          ),
+          builder: (context, params) => ReservaCitaWidget(),
         ),
         FFRoute(
           name: 'ReporteSiniestro',
           path: '/reporteSiniestro',
-          builder: (context, params) => NavBarPage(
-            initialPage: '',
-            page: ReporteSiniestroWidget(),
-          ),
+          builder: (context, params) => ReporteSiniestroWidget(),
         ),
         FFRoute(
           name: 'Avaluos',
           path: '/avaluos',
-          builder: (context, params) => NavBarPage(
-            initialPage: '',
-            page: AvaluosWidget(),
-          ),
+          builder: (context, params) => AvaluosWidget(),
         ),
         FFRoute(
           name: 'CentrosEstimacionPDF',
           path: '/centrosEstimacionPDF',
-          builder: (context, params) => NavBarPage(
-            initialPage: '',
-            page: CentrosEstimacionPDFWidget(),
-          ),
+          builder: (context, params) => CentrosEstimacionPDFWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
