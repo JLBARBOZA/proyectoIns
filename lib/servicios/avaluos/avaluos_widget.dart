@@ -153,8 +153,8 @@ class _AvaluosWidgetState extends State<AvaluosWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     30.0, 70.0, 30.0, 70.0),
                                 child: FFButtonWidget(
-                                  onPressed: () {
-                                    print('Button pressed ...');
+                                  onPressed: () async {
+                                    context.pushNamed('CentrosEstimacionPDF');
                                   },
                                   text: 'Centros de Estimación de Daños',
                                   icon: Icon(

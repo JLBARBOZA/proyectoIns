@@ -53,3 +53,5 @@ export '/servicios/reserva_cita/reserva_cita_widget.dart'
 export '/servicios/reporte_siniestro/reporte_siniestro_widget.dart'
     show ReporteSiniestroWidget;
 export '/servicios/avaluos/avaluos_widget.dart' show AvaluosWidget;
+export '/servicios/centros_estimacion_p_d_f/centros_estimacion_p_d_f_widget.dart'
+    show CentrosEstimacionPDFWidget;
