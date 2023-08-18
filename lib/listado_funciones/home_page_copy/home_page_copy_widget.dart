@@ -225,7 +225,7 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
                       ),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          context.pushNamed('Nosotros');
+                          context.pushNamed('nosotros');
                         },
                         text: 'Nosotros',
                         options: FFButtonOptions(

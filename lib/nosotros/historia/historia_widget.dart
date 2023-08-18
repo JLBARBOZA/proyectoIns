@@ -37,9 +37,9 @@ class _HistoriaWidgetState extends State<HistoriaWidget> {
     return YoutubeFullScreenWrapper(
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: Color(0xFF212121),
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+          backgroundColor: Color(0xFF07870C),
           automaticallyImplyLeading: false,
           leading: InkWell(
             splashColor: Colors.transparent,
@@ -47,20 +47,28 @@ class _HistoriaWidgetState extends State<HistoriaWidget> {
             hoverColor: Colors.transparent,
             highlightColor: Colors.transparent,
             onTap: () async {
-              context.pop();
+              context.pushNamed('nosotros');
             },
             child: Icon(
               Icons.chevron_left_rounded,
-              color: FlutterFlowTheme.of(context).primaryText,
+              color: FlutterFlowTheme.of(context).primaryBtnText,
               size: 32.0,
             ),
           ),
-          title: Text(
-            'Historia',
-            style: FlutterFlowTheme.of(context).bodyLarge.override(
-                  fontFamily: 'Readex Pro',
-                  fontSize: 30.0,
-                ),
+          title: Align(
+            alignment: AlignmentDirectional(0.0, 0.0),
+            child: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 50.0, 0.0),
+              child: Text(
+                'Historia',
+                textAlign: TextAlign.start,
+                style: FlutterFlowTheme.of(context).bodyLarge.override(
+                      fontFamily: 'Readex Pro',
+                      color: FlutterFlowTheme.of(context).primaryBtnText,
+                      fontSize: 30.0,
+                    ),
+              ),
+            ),
           ),
           actions: [],
           centerTitle: false,
@@ -80,10 +88,16 @@ class _HistoriaWidgetState extends State<HistoriaWidget> {
                     children: [
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
-                            20.0, 12.0, 20.0, 4.0),
+                            20.0, 20.0, 20.0, 4.0),
                         child: Text(
                           'El Instituto Nacional de Seguros ( INS ) se fundó mediante Ley número 12, el 30 de octubre de 1924 y en su creación tomaron parte el Lic. Ricardo Jiménez Oreamuno, Presidente de la República, quien iniciaba su segunda administración (1924-1928), y el Lic. Tomás Soley Güell, Secretario de Hacienda y Comercio, gestor del proyecto.\n\nEn sus inicios se llamó Banco Nacional de Seguros, en decreto del 21 de mayo de 1948 cambió su nombre a Instituto Nacional de Seguros (INS), mismo que se mantiene en la actualidad. El INS tuvo a su cargo la administración del monopolio de los seguros desde su creación hasta el 07 de agosto del 2008, fecha en que entró en vigencia la Ley número 8653 “Ley Reguladora del Mercado de Seguros”, la cual abrió el mercado y devenga la competencia.',
-                          style: FlutterFlowTheme.of(context).labelLarge,
+                          style: FlutterFlowTheme.of(context)
+                              .labelLarge
+                              .override(
+                                fontFamily: 'Readex Pro',
+                                color:
+                                    FlutterFlowTheme.of(context).primaryBtnText,
+                              ),
                         ),
                       ),
                       Padding(

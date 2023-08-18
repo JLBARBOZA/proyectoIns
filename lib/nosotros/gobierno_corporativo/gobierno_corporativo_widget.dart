@@ -50,7 +50,7 @@ class _GobiernoCorporativoWidgetState extends State<GobiernoCorporativoWidget> {
             hoverColor: Colors.transparent,
             highlightColor: Colors.transparent,
             onTap: () async {
-              context.pushNamed('Nosotros');
+              context.pushNamed('nosotros');
             },
             child: Icon(
               Icons.arrow_back,

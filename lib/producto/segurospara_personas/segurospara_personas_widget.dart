@@ -103,21 +103,23 @@ class _SegurosparaPersonasWidgetState extends State<SegurosparaPersonasWidget> {
                       Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  20.0, 20.0, 20.0, 20.0),
-                              child: Text(
-                                'Seguros para Personas',
-                                textAlign: TextAlign.center,
-                                style: FlutterFlowTheme.of(context)
-                                    .headlineMedium
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      color: Color(0xFF07870C),
-                                      fontSize: 25.0,
-                                    ),
+                          Expanded(
+                            child: Align(
+                              alignment: AlignmentDirectional(0.0, 0.0),
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    20.0, 20.0, 20.0, 20.0),
+                                child: Text(
+                                  'Seguros para Personas',
+                                  textAlign: TextAlign.center,
+                                  style: FlutterFlowTheme.of(context)
+                                      .headlineMedium
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Color(0xFF07870C),
+                                        fontSize: 25.0,
+                                      ),
+                                ),
                               ),
                             ),
                           ),
@@ -171,9 +173,7 @@ class _SegurosparaPersonasWidgetState extends State<SegurosparaPersonasWidget> {
                                                       24.0, 0.0, 24.0, 0.0),
                                               iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                              color: Color(0xFF07870C),
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .titleSmall
@@ -241,9 +241,7 @@ class _SegurosparaPersonasWidgetState extends State<SegurosparaPersonasWidget> {
                                                       24.0, 0.0, 24.0, 0.0),
                                               iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                              color: Color(0xFF07870C),
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .titleSmall
@@ -319,9 +317,7 @@ class _SegurosparaPersonasWidgetState extends State<SegurosparaPersonasWidget> {
                                                       24.0, 0.0, 24.0, 0.0),
                                               iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                              color: Color(0xFF07870C),
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .titleSmall
@@ -385,9 +381,7 @@ class _SegurosparaPersonasWidgetState extends State<SegurosparaPersonasWidget> {
                                                       24.0, 0.0, 24.0, 0.0),
                                               iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                              color: Color(0xFF07870C),
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .titleSmall
@@ -467,9 +461,7 @@ class _SegurosparaPersonasWidgetState extends State<SegurosparaPersonasWidget> {
                                                     EdgeInsetsDirectional
                                                         .fromSTEB(
                                                             0.0, 0.0, 0.0, 0.0),
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
+                                                color: Color(0xFF07870C),
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .titleSmall

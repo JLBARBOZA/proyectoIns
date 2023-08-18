@@ -1,11 +1,15 @@
+import '/components/bs_info_contra_widget.dart';
+import '/components/bs_info_insti_widget.dart';
+import '/components/bs_info_jerar_widget.dart';
+import '/components/bs_info_red_widget.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class CotizacionConfirmaModel extends FlutterFlowModel {
+class InfoModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

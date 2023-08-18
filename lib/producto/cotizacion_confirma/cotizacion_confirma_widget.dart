@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'cotizacion_confirma_model.dart';
 export 'cotizacion_confirma_model.dart';
@@ -40,7 +39,7 @@ class _CotizacionConfirmaWidgetState extends State<CotizacionConfirmaWidget> {
       onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFF39D2C0),
+        backgroundColor: Color(0xFF07870C),
         body: SafeArea(
           top: true,
           child: Column(
@@ -53,23 +52,19 @@ class _CotizacionConfirmaWidgetState extends State<CotizacionConfirmaWidget> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Lottie.network(
-                      'https://assets10.lottiefiles.com/packages/lf20_xlkxtmul.json',
-                      width: 200.0,
-                      height: 200.0,
-                      fit: BoxFit.cover,
-                      frameRate: FrameRate(60.0),
-                      repeat: false,
-                      animate: true,
+                    Icon(
+                      Icons.check,
+                      color: FlutterFlowTheme.of(context).primaryBtnText,
+                      size: 100.0,
                     ),
                   ],
                 ),
               ),
               Text(
-                'Cotización exitosa!',
+                '¡Cotización exitosa!',
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
                       fontFamily: 'Outfit',
-                      color: Colors.black,
+                      color: FlutterFlowTheme.of(context).primaryBtnText,
                       fontSize: 32.0,
                       fontWeight: FontWeight.w500,
                     ),

@@ -1,8 +1,8 @@
+import '/components/reset_p_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -12,25 +12,17 @@ import 'package:provider/provider.dart';
 class ActualizarContrasennaModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
 
-  // State field(s) for Correo widget.
-  TextEditingController? correoController;
-  String? Function(BuildContext, String?)? correoControllerValidator;
-  // State field(s) for contrasennaAntigua widget.
-  TextEditingController? contrasennaAntiguaController;
-  String? Function(BuildContext, String?)?
-      contrasennaAntiguaControllerValidator;
-  // State field(s) for contrasennaNueva widget.
-  TextEditingController? contrasennaNuevaController;
-  String? Function(BuildContext, String?)? contrasennaNuevaControllerValidator;
+  // Model for resetP component.
+  late ResetPModel resetPModel;
 
   /// Initialization and disposal methods.
 
-  void initState(BuildContext context) {}
+  void initState(BuildContext context) {
+    resetPModel = createModel(context, () => ResetPModel());
+  }
 
   void dispose() {
-    correoController?.dispose();
-    contrasennaAntiguaController?.dispose();
-    contrasennaNuevaController?.dispose();
+    resetPModel.dispose();
   }
 
   /// Action blocks are added here.

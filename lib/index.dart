@@ -12,12 +12,9 @@ export '/autenticacion/actualizar_datos_personales/actualizar_datos_personales_w
     show ActualizarDatosPersonalesWidget;
 export '/comentarios/comentarios/comentarios_widget.dart'
     show ComentariosWidget;
-export '/nosotros/nosotros/nosotros_widget.dart' show NosotrosWidget;
 export '/nosotros/gobierno_corporativo/gobierno_corporativo_widget.dart'
     show GobiernoCorporativoWidget;
 export '/nosotros/historia/historia_widget.dart' show HistoriaWidget;
-export '/nosotros/transparencia/transparencia_widget.dart'
-    show TransparenciaWidget;
 export '/contactenos/agentes_seguros/agentes_seguros_widget.dart'
     show AgentesSegurosWidget;
 export '/contactenos/contactenos/contactenos_widget.dart'
@@ -55,3 +52,7 @@ export '/servicios/reporte_siniestro/reporte_siniestro_widget.dart'
 export '/servicios/avaluos/avaluos_widget.dart' show AvaluosWidget;
 export '/servicios/centros_estimacion_p_d_f/centros_estimacion_p_d_f_widget.dart'
     show CentrosEstimacionPDFWidget;
+export '/nosotros/nosotros/nosotros_widget.dart' show NosotrosWidget;
+export '/nosotros/transparencia/transparencia_widget.dart'
+    show TransparenciaWidget;
+export '/nosotros/info/info_widget.dart' show InfoWidget;

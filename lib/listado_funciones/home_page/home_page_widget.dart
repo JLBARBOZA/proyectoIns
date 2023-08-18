@@ -246,7 +246,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       ),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          context.pushNamed('Nosotros');
+                          context.pushNamed('nosotros');
                         },
                         text: 'Nosotros',
                         icon: Icon(

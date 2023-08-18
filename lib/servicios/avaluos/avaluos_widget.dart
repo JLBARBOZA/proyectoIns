@@ -93,7 +93,7 @@ class _AvaluosWidgetState extends State<AvaluosWidget> {
                                       fontFamily: 'Readex Pro',
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBtnText,
-                                      fontSize: 20.0,
+                                      fontSize: 26.0,
                                     ),
                               ),
                             ),

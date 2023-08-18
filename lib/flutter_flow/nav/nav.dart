@@ -127,11 +127,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => ComentariosWidget(),
         ),
         FFRoute(
-          name: 'Nosotros',
-          path: '/nosotros',
-          builder: (context, params) => NosotrosWidget(),
-        ),
-        FFRoute(
           name: 'gobiernoCorporativo',
           path: '/gobiernoCorporativo',
           builder: (context, params) => GobiernoCorporativoWidget(),
@@ -140,11 +135,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'historia',
           path: '/historia',
           builder: (context, params) => HistoriaWidget(),
-        ),
-        FFRoute(
-          name: 'transparencia',
-          path: '/transparencia',
-          builder: (context, params) => TransparenciaWidget(),
         ),
         FFRoute(
           name: 'agentesSeguros',
@@ -261,6 +251,21 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'CentrosEstimacionPDF',
           path: '/centrosEstimacionPDF',
           builder: (context, params) => CentrosEstimacionPDFWidget(),
+        ),
+        FFRoute(
+          name: 'nosotros',
+          path: '/nosotros',
+          builder: (context, params) => NosotrosWidget(),
+        ),
+        FFRoute(
+          name: 'transparencia',
+          path: '/transparencia',
+          builder: (context, params) => TransparenciaWidget(),
+        ),
+        FFRoute(
+          name: 'info',
+          path: '/info',
+          builder: (context, params) => InfoWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],

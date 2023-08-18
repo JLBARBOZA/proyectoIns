@@ -44,6 +44,23 @@ class _PuntosYSedesMenuWidgetState extends State<PuntosYSedesMenuWidget> {
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
+          leading: Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 0.0),
+            child: InkWell(
+              splashColor: Colors.transparent,
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
+              onTap: () async {
+                context.pushNamed('HomePage');
+              },
+              child: Icon(
+                Icons.chevron_left_outlined,
+                color: Colors.white,
+                size: 35.0,
+              ),
+            ),
+          ),
           title: Align(
             alignment: AlignmentDirectional(0.0, 0.0),
             child: Text(
@@ -54,25 +71,7 @@ class _PuntosYSedesMenuWidgetState extends State<PuntosYSedesMenuWidget> {
                   ),
             ),
           ),
-          actions: [
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 0.0),
-              child: InkWell(
-                splashColor: Colors.transparent,
-                focusColor: Colors.transparent,
-                hoverColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                onTap: () async {
-                  context.pushNamed('HomePage');
-                },
-                child: Icon(
-                  Icons.chevron_left_outlined,
-                  color: Colors.white,
-                  size: 35.0,
-                ),
-              ),
-            ),
-          ],
+          actions: [],
           centerTitle: false,
           elevation: 2.0,
         ),

@@ -180,7 +180,7 @@ class _RobosWidgetState extends State<RobosWidget> {
                             20.0, 20.0, 20.0, 20.0),
                         child: Container(
                           width: 363.0,
-                          height: 113.0,
+                          height: 138.0,
                           decoration: BoxDecoration(
                             color: Color(0xFF07870C),
                             boxShadow: [
