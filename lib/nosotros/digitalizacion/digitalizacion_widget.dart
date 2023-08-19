@@ -162,6 +162,10 @@ class _DigitalizacionWidgetState extends State<DigitalizacionWidget> {
                             ],
                             borderRadius: BorderRadius.circular(8.0),
                             shape: BoxShape.rectangle,
+                            border: Border.all(
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                            ),
                           ),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -228,6 +232,10 @@ class _DigitalizacionWidgetState extends State<DigitalizacionWidget> {
                             ],
                             borderRadius: BorderRadius.circular(8.0),
                             shape: BoxShape.rectangle,
+                            border: Border.all(
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                            ),
                           ),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -294,6 +302,10 @@ class _DigitalizacionWidgetState extends State<DigitalizacionWidget> {
                             ],
                             borderRadius: BorderRadius.circular(8.0),
                             shape: BoxShape.rectangle,
+                            border: Border.all(
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                            ),
                           ),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,

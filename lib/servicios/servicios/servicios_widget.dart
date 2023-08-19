@@ -88,6 +88,31 @@ class _ServiciosWidgetState extends State<ServiciosWidget> {
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Expanded(
+                          child: Align(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  20.0, 20.0, 20.0, 20.0),
+                              child: Text(
+                                'Servicios',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      color: Color(0xFF07870C),
+                                      fontSize: 26.0,
+                                      fontWeight: FontWeight.w900,
+                                    ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                     Expanded(
                       child: Align(
                         alignment: AlignmentDirectional(0.0, -1.0),

@@ -94,26 +94,25 @@ class _CotizacionWidgetState extends State<CotizacionWidget> {
                   snap: true,
                   backgroundColor: Colors.black,
                   automaticallyImplyLeading: false,
-                  actions: [
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
-                      child: InkWell(
-                        splashColor: Colors.transparent,
-                        focusColor: Colors.transparent,
-                        hoverColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                        onTap: () async {
-                          context.safePop();
-                        },
-                        child: Icon(
-                          Icons.arrow_back_sharp,
-                          color: FlutterFlowTheme.of(context).primaryBtnText,
-                          size: 24.0,
-                        ),
+                  leading: Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
+                    child: InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        context.safePop();
+                      },
+                      child: Icon(
+                        Icons.arrow_back_sharp,
+                        color: FlutterFlowTheme.of(context).primaryBtnText,
+                        size: 24.0,
                       ),
                     ),
-                  ],
+                  ),
+                  actions: [],
                   flexibleSpace: FlexibleSpaceBar(
                     background: ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),

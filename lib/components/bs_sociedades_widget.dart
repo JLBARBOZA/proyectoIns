@@ -49,7 +49,7 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
       child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-          color: FlutterFlowTheme.of(context).secondaryBackground,
+          color: Color(0xFF212121),
           boxShadow: [
             BoxShadow(
               blurRadius: 4.0,
@@ -62,6 +62,9 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
             bottomRight: Radius.circular(0.0),
             topLeft: Radius.circular(12.0),
             topRight: Radius.circular(12.0),
+          ),
+          border: Border.all(
+            color: Color(0xFF07870C),
           ),
         ),
         child: Padding(
@@ -100,7 +103,10 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                     widget.infoSociedades?.nombre,
                     'Sin nombre',
                   ),
-                  style: FlutterFlowTheme.of(context).headlineSmall,
+                  style: FlutterFlowTheme.of(context).headlineSmall.override(
+                        fontFamily: 'Outfit',
+                        color: Color(0xFF07870C),
+                      ),
                 ),
               ),
               Padding(
@@ -109,7 +115,7 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                   'Sociedades agencias seguros',
                   style: FlutterFlowTheme.of(context).labelMedium.override(
                         fontFamily: 'Readex Pro',
-                        color: Colors.black,
+                        color: FlutterFlowTheme.of(context).primaryBtnText,
                       ),
                 ),
               ),
@@ -129,12 +135,15 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                       children: [
                         Text(
                           'Detalles',
-                          style:
-                              FlutterFlowTheme.of(context).bodySmall.override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 15.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .bodySmall
+                              .override(
+                                fontFamily: 'Readex Pro',
+                                color:
+                                    FlutterFlowTheme.of(context).primaryBtnText,
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.bold,
+                              ),
                         ),
                       ],
                     ),
@@ -148,12 +157,14 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                       children: [
                         Text(
                           'Codigo:',
-                          style:
-                              FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.black,
-                                    fontSize: 16.0,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                fontFamily: 'Readex Pro',
+                                color:
+                                    FlutterFlowTheme.of(context).primaryBtnText,
+                                fontSize: 16.0,
+                              ),
                         ),
                         Expanded(
                           child: Align(
@@ -170,6 +181,8 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -188,12 +201,14 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                       children: [
                         Text(
                           'Licencia:',
-                          style:
-                              FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.black,
-                                    fontSize: 16.0,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                fontFamily: 'Readex Pro',
+                                color:
+                                    FlutterFlowTheme.of(context).primaryBtnText,
+                                fontSize: 16.0,
+                              ),
                         ),
                         Expanded(
                           child: Align(
@@ -210,6 +225,8 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -228,12 +245,14 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                       children: [
                         Text(
                           'Ced. Juridica:',
-                          style:
-                              FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.black,
-                                    fontSize: 16.0,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                fontFamily: 'Readex Pro',
+                                color:
+                                    FlutterFlowTheme.of(context).primaryBtnText,
+                                fontSize: 16.0,
+                              ),
                         ),
                         Expanded(
                           child: Align(
@@ -250,6 +269,8 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -268,12 +289,14 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                       children: [
                         Text(
                           'Gerente:',
-                          style:
-                              FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.black,
-                                    fontSize: 16.0,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                fontFamily: 'Readex Pro',
+                                color:
+                                    FlutterFlowTheme.of(context).primaryBtnText,
+                                fontSize: 16.0,
+                              ),
                         ),
                         Expanded(
                           child: Align(
@@ -290,6 +313,8 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -308,12 +333,14 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                       children: [
                         Text(
                           'Correo gerente:',
-                          style:
-                              FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.black,
-                                    fontSize: 16.0,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                fontFamily: 'Readex Pro',
+                                color:
+                                    FlutterFlowTheme.of(context).primaryBtnText,
+                                fontSize: 16.0,
+                              ),
                         ),
                         Expanded(
                           child: Align(
@@ -330,6 +357,8 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 13.0,
                                     ),
                               ),
@@ -355,7 +384,8 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                                   .titleMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Colors.black,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBtnText,
                                     fontSize: 16.0,
                                   ),
                             ),
@@ -376,6 +406,8 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -401,7 +433,8 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                                   .titleMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Colors.black,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBtnText,
                                     fontSize: 16.0,
                                   ),
                             ),
@@ -422,6 +455,8 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 13.0,
                                     ),
                               ),
@@ -447,7 +482,8 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                                   .titleMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Colors.black,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBtnText,
                                     fontSize: 16.0,
                                   ),
                             ),
@@ -468,6 +504,8 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -493,7 +531,8 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                                   .titleMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Colors.black,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBtnText,
                                     fontSize: 16.0,
                                   ),
                             ),
@@ -514,6 +553,8 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -539,7 +580,8 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                                   .titleMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Colors.black,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBtnText,
                                     fontSize: 16.0,
                                   ),
                             ),
@@ -560,6 +602,8 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -584,7 +628,7 @@ class _BsSociedadesWidgetState extends State<BsSociedadesWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     iconPadding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).secondary,
+                    color: Color(0xFF07870C),
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Readex Pro',
                           color: Colors.white,

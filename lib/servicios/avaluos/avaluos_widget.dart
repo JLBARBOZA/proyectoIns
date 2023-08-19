@@ -51,6 +51,20 @@ class _AvaluosWidgetState extends State<AvaluosWidget> {
               snap: true,
               backgroundColor: Colors.black,
               automaticallyImplyLeading: true,
+              leading: InkWell(
+                splashColor: Colors.transparent,
+                focusColor: Colors.transparent,
+                hoverColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+                onTap: () async {
+                  context.safePop();
+                },
+                child: Icon(
+                  Icons.arrow_back,
+                  color: FlutterFlowTheme.of(context).primaryBtnText,
+                  size: 24.0,
+                ),
+              ),
               actions: [],
               flexibleSpace: FlexibleSpaceBar(
                 background: ClipRRect(

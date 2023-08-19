@@ -157,6 +157,10 @@ class _GobiernoWidgetState extends State<GobiernoWidget> {
                             ],
                             borderRadius: BorderRadius.circular(8.0),
                             shape: BoxShape.rectangle,
+                            border: Border.all(
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                            ),
                           ),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -250,6 +254,10 @@ class _GobiernoWidgetState extends State<GobiernoWidget> {
                             ],
                             borderRadius: BorderRadius.circular(8.0),
                             shape: BoxShape.rectangle,
+                            border: Border.all(
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                            ),
                           ),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -337,6 +345,10 @@ class _GobiernoWidgetState extends State<GobiernoWidget> {
                             ],
                             borderRadius: BorderRadius.circular(8.0),
                             shape: BoxShape.rectangle,
+                            border: Border.all(
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                            ),
                           ),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -423,6 +435,10 @@ class _GobiernoWidgetState extends State<GobiernoWidget> {
                             ],
                             borderRadius: BorderRadius.circular(8.0),
                             shape: BoxShape.rectangle,
+                            border: Border.all(
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                            ),
                           ),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -509,6 +525,10 @@ class _GobiernoWidgetState extends State<GobiernoWidget> {
                             ],
                             borderRadius: BorderRadius.circular(8.0),
                             shape: BoxShape.rectangle,
+                            border: Border.all(
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                            ),
                           ),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,

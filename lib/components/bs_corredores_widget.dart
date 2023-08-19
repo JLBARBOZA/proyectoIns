@@ -49,7 +49,7 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
       child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-          color: FlutterFlowTheme.of(context).secondaryBackground,
+          color: Color(0xFF212121),
           boxShadow: [
             BoxShadow(
               blurRadius: 4.0,
@@ -62,6 +62,9 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
             bottomRight: Radius.circular(0.0),
             topLeft: Radius.circular(12.0),
             topRight: Radius.circular(12.0),
+          ),
+          border: Border.all(
+            color: Color(0xFF07870C),
           ),
         ),
         child: Padding(
@@ -100,7 +103,10 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                     widget.infoCorredores?.nombre,
                     'Sin nombre',
                   ),
-                  style: FlutterFlowTheme.of(context).headlineSmall,
+                  style: FlutterFlowTheme.of(context).headlineSmall.override(
+                        fontFamily: 'Outfit',
+                        color: Color(0xFF07870C),
+                      ),
                 ),
               ),
               Padding(
@@ -109,7 +115,7 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                   'Corredores de seguros',
                   style: FlutterFlowTheme.of(context).labelMedium.override(
                         fontFamily: 'Readex Pro',
-                        color: Colors.black,
+                        color: FlutterFlowTheme.of(context).primaryBtnText,
                       ),
                 ),
               ),
@@ -129,12 +135,15 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                       children: [
                         Text(
                           'Detalles',
-                          style:
-                              FlutterFlowTheme.of(context).bodySmall.override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 15.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .bodySmall
+                              .override(
+                                fontFamily: 'Readex Pro',
+                                color:
+                                    FlutterFlowTheme.of(context).primaryBtnText,
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.bold,
+                              ),
                         ),
                       ],
                     ),
@@ -148,12 +157,14 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                       children: [
                         Text(
                           'Codigo:',
-                          style:
-                              FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.black,
-                                    fontSize: 16.0,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                fontFamily: 'Readex Pro',
+                                color:
+                                    FlutterFlowTheme.of(context).primaryBtnText,
+                                fontSize: 16.0,
+                              ),
                         ),
                         Expanded(
                           child: Align(
@@ -170,6 +181,8 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -188,12 +201,14 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                       children: [
                         Text(
                           'Licencia:',
-                          style:
-                              FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.black,
-                                    fontSize: 16.0,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                fontFamily: 'Readex Pro',
+                                color:
+                                    FlutterFlowTheme.of(context).primaryBtnText,
+                                fontSize: 16.0,
+                              ),
                         ),
                         Expanded(
                           child: Align(
@@ -210,6 +225,8 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -228,12 +245,14 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                       children: [
                         Text(
                           'Ced. Juridica:',
-                          style:
-                              FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.black,
-                                    fontSize: 16.0,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                fontFamily: 'Readex Pro',
+                                color:
+                                    FlutterFlowTheme.of(context).primaryBtnText,
+                                fontSize: 16.0,
+                              ),
                         ),
                         Expanded(
                           child: Align(
@@ -251,6 +270,8 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -269,12 +290,14 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                       children: [
                         Text(
                           'Gerente:',
-                          style:
-                              FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.black,
-                                    fontSize: 16.0,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                fontFamily: 'Readex Pro',
+                                color:
+                                    FlutterFlowTheme.of(context).primaryBtnText,
+                                fontSize: 16.0,
+                              ),
                         ),
                         Expanded(
                           child: Align(
@@ -291,6 +314,8 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -316,7 +341,8 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                                   .titleMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Colors.black,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBtnText,
                                     fontSize: 16.0,
                                   ),
                             ),
@@ -337,6 +363,8 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -362,7 +390,8 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                                   .titleMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Colors.black,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBtnText,
                                     fontSize: 16.0,
                                   ),
                             ),
@@ -383,6 +412,8 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -408,7 +439,8 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                                   .titleMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Colors.black,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBtnText,
                                     fontSize: 16.0,
                                   ),
                             ),
@@ -429,6 +461,8 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -454,7 +488,8 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                                   .titleMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Colors.black,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBtnText,
                                     fontSize: 16.0,
                                   ),
                             ),
@@ -475,6 +510,8 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -500,7 +537,8 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                                   .titleMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Colors.black,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBtnText,
                                     fontSize: 16.0,
                                   ),
                             ),
@@ -521,6 +559,8 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -545,10 +585,10 @@ class _BsCorredoresWidgetState extends State<BsCorredoresWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     iconPadding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).secondary,
+                    color: Color(0xFF07870C),
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Readex Pro',
-                          color: Colors.white,
+                          color: FlutterFlowTheme.of(context).primaryBtnText,
                         ),
                     elevation: 2.0,
                     borderSide: BorderSide(

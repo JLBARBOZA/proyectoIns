@@ -50,7 +50,7 @@ class _BsAgentesProvinciasWidgetState extends State<BsAgentesProvinciasWidget> {
       child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-          color: FlutterFlowTheme.of(context).secondaryBackground,
+          color: Color(0xFF212121),
           boxShadow: [
             BoxShadow(
               blurRadius: 4.0,
@@ -63,6 +63,9 @@ class _BsAgentesProvinciasWidgetState extends State<BsAgentesProvinciasWidget> {
             bottomRight: Radius.circular(0.0),
             topLeft: Radius.circular(12.0),
             topRight: Radius.circular(12.0),
+          ),
+          border: Border.all(
+            color: Color(0xFF07870C),
           ),
         ),
         child: Padding(
@@ -101,7 +104,10 @@ class _BsAgentesProvinciasWidgetState extends State<BsAgentesProvinciasWidget> {
                     widget.infoAgentes?.nombre,
                     'Sin nombre',
                   ),
-                  style: FlutterFlowTheme.of(context).headlineSmall,
+                  style: FlutterFlowTheme.of(context).headlineSmall.override(
+                        fontFamily: 'Outfit',
+                        color: Color(0xFF07870C),
+                      ),
                 ),
               ),
               Padding(
@@ -110,7 +116,7 @@ class _BsAgentesProvinciasWidgetState extends State<BsAgentesProvinciasWidget> {
                   'Agentes de seguros',
                   style: FlutterFlowTheme.of(context).labelMedium.override(
                         fontFamily: 'Readex Pro',
-                        color: Colors.black,
+                        color: FlutterFlowTheme.of(context).primaryBtnText,
                       ),
                 ),
               ),
@@ -130,12 +136,15 @@ class _BsAgentesProvinciasWidgetState extends State<BsAgentesProvinciasWidget> {
                       children: [
                         Text(
                           'Detalles',
-                          style:
-                              FlutterFlowTheme.of(context).bodySmall.override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 15.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .bodySmall
+                              .override(
+                                fontFamily: 'Readex Pro',
+                                color:
+                                    FlutterFlowTheme.of(context).primaryBtnText,
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.bold,
+                              ),
                         ),
                       ],
                     ),
@@ -149,12 +158,14 @@ class _BsAgentesProvinciasWidgetState extends State<BsAgentesProvinciasWidget> {
                       children: [
                         Text(
                           'Teléfono:',
-                          style:
-                              FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.black,
-                                    fontSize: 16.0,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                fontFamily: 'Readex Pro',
+                                color:
+                                    FlutterFlowTheme.of(context).primaryBtnText,
+                                fontSize: 16.0,
+                              ),
                         ),
                         Expanded(
                           child: Align(
@@ -171,6 +182,8 @@ class _BsAgentesProvinciasWidgetState extends State<BsAgentesProvinciasWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -189,12 +202,14 @@ class _BsAgentesProvinciasWidgetState extends State<BsAgentesProvinciasWidget> {
                       children: [
                         Text(
                           'Correo:',
-                          style:
-                              FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.black,
-                                    fontSize: 16.0,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                fontFamily: 'Readex Pro',
+                                color:
+                                    FlutterFlowTheme.of(context).primaryBtnText,
+                                fontSize: 16.0,
+                              ),
                         ),
                         Expanded(
                           child: Align(
@@ -211,6 +226,8 @@ class _BsAgentesProvinciasWidgetState extends State<BsAgentesProvinciasWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -229,12 +246,14 @@ class _BsAgentesProvinciasWidgetState extends State<BsAgentesProvinciasWidget> {
                       children: [
                         Text(
                           'Direccion:',
-                          style:
-                              FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.black,
-                                    fontSize: 16.0,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                fontFamily: 'Readex Pro',
+                                color:
+                                    FlutterFlowTheme.of(context).primaryBtnText,
+                                fontSize: 16.0,
+                              ),
                         ),
                         Expanded(
                           child: Align(
@@ -251,6 +270,8 @@ class _BsAgentesProvinciasWidgetState extends State<BsAgentesProvinciasWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -269,12 +290,14 @@ class _BsAgentesProvinciasWidgetState extends State<BsAgentesProvinciasWidget> {
                       children: [
                         Text(
                           'Licencia SUGESE:',
-                          style:
-                              FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Colors.black,
-                                    fontSize: 16.0,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .labelMedium
+                              .override(
+                                fontFamily: 'Readex Pro',
+                                color:
+                                    FlutterFlowTheme.of(context).primaryBtnText,
+                                fontSize: 16.0,
+                              ),
                         ),
                         Expanded(
                           child: Align(
@@ -292,6 +315,8 @@ class _BsAgentesProvinciasWidgetState extends State<BsAgentesProvinciasWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -317,7 +342,8 @@ class _BsAgentesProvinciasWidgetState extends State<BsAgentesProvinciasWidget> {
                                   .titleMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Colors.black,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBtnText,
                                     fontSize: 16.0,
                                   ),
                             ),
@@ -338,6 +364,8 @@ class _BsAgentesProvinciasWidgetState extends State<BsAgentesProvinciasWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 14.0,
                                     ),
                               ),
@@ -362,7 +390,7 @@ class _BsAgentesProvinciasWidgetState extends State<BsAgentesProvinciasWidget> {
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).secondary,
+                        color: Color(0xFF07870C),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Readex Pro',

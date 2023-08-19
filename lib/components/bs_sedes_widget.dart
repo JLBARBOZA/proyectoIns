@@ -57,7 +57,7 @@ class _BsSedesWidgetState extends State<BsSedesWidget> {
       child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-          color: FlutterFlowTheme.of(context).secondaryBackground,
+          color: Colors.black,
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(0.0),
             bottomRight: Radius.circular(0.0),
@@ -84,12 +84,22 @@ class _BsSedesWidgetState extends State<BsSedesWidget> {
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Text(
-                    valueOrDefault<String>(
-                      widget.producto?.nombre,
-                      'Default',
+                  Expanded(
+                    child: Align(
+                      alignment: AlignmentDirectional(0.0, 0.0),
+                      child: Text(
+                        valueOrDefault<String>(
+                          widget.producto?.nombre,
+                          'Default',
+                        ),
+                        textAlign: TextAlign.center,
+                        style:
+                            FlutterFlowTheme.of(context).headlineSmall.override(
+                                  fontFamily: 'Outfit',
+                                  color: Color(0xFF07870C),
+                                ),
+                      ),
                     ),
-                    style: FlutterFlowTheme.of(context).headlineSmall,
                   ),
                 ],
               ),
@@ -108,10 +118,10 @@ class _BsSedesWidgetState extends State<BsSedesWidget> {
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        color: Color(0xFF212121),
                         borderRadius: BorderRadius.circular(8.0),
                         border: Border.all(
-                          color: FlutterFlowTheme.of(context).alternate,
+                          color: Color(0xFF07870C),
                           width: 2.0,
                         ),
                       ),
@@ -129,7 +139,8 @@ class _BsSedesWidgetState extends State<BsSedesWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Colors.black,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 17.0,
                                     ),
                               ),
@@ -145,10 +156,10 @@ class _BsSedesWidgetState extends State<BsSedesWidget> {
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        color: Color(0xFF212121),
                         borderRadius: BorderRadius.circular(8.0),
                         border: Border.all(
-                          color: FlutterFlowTheme.of(context).alternate,
+                          color: Color(0xFF07870C),
                           width: 2.0,
                         ),
                       ),
@@ -165,7 +176,13 @@ class _BsSedesWidgetState extends State<BsSedesWidget> {
                                   widget.producto?.direccion,
                                   'Default',
                                 ),
-                                style: FlutterFlowTheme.of(context).bodyLarge,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyLarge
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
+                                    ),
                               ),
                             ),
                           ],
@@ -179,10 +196,10 @@ class _BsSedesWidgetState extends State<BsSedesWidget> {
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        color: Color(0xFF212121),
                         borderRadius: BorderRadius.circular(8.0),
                         border: Border.all(
-                          color: FlutterFlowTheme.of(context).alternate,
+                          color: Color(0xFF07870C),
                           width: 2.0,
                         ),
                       ),
@@ -200,7 +217,8 @@ class _BsSedesWidgetState extends State<BsSedesWidget> {
                                     .bodyLarge
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Colors.black,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
                                       fontSize: 17.0,
                                     ),
                               ),
@@ -216,10 +234,10 @@ class _BsSedesWidgetState extends State<BsSedesWidget> {
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        color: Color(0xFF212121),
                         borderRadius: BorderRadius.circular(8.0),
                         border: Border.all(
-                          color: FlutterFlowTheme.of(context).alternate,
+                          color: Color(0xFF07870C),
                           width: 2.0,
                         ),
                       ),
@@ -236,7 +254,13 @@ class _BsSedesWidgetState extends State<BsSedesWidget> {
                                   widget.producto?.telefono,
                                   'Default',
                                 ),
-                                style: FlutterFlowTheme.of(context).bodyLarge,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyLarge
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
+                                    ),
                               ),
                             ),
                           ],
@@ -250,10 +274,10 @@ class _BsSedesWidgetState extends State<BsSedesWidget> {
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        color: Color(0xFF212121),
                         borderRadius: BorderRadius.circular(8.0),
                         border: Border.all(
-                          color: FlutterFlowTheme.of(context).alternate,
+                          color: Color(0xFF07870C),
                           width: 2.0,
                         ),
                       ),
@@ -268,7 +292,13 @@ class _BsSedesWidgetState extends State<BsSedesWidget> {
                               child: Text(
                                 'Horario de atención: 8:00 a.m. a 5:00 p.m. (Jornada continua).',
                                 textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.of(context).bodyLarge,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyLarge
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
+                                    ),
                               ),
                             ),
                           ],

@@ -162,6 +162,10 @@ class _RobosWidgetState extends State<RobosWidget> {
                             ],
                             borderRadius: BorderRadius.circular(8.0),
                             shape: BoxShape.rectangle,
+                            border: Border.all(
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                            ),
                           ),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
@@ -195,6 +199,10 @@ class _RobosWidgetState extends State<RobosWidget> {
                               )
                             ],
                             borderRadius: BorderRadius.circular(8.0),
+                            border: Border.all(
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                            ),
                           ),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
@@ -228,6 +236,10 @@ class _RobosWidgetState extends State<RobosWidget> {
                               )
                             ],
                             borderRadius: BorderRadius.circular(8.0),
+                            border: Border.all(
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                            ),
                           ),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
