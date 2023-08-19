@@ -101,13 +101,13 @@ class _MedicosWidgetState extends State<MedicosWidget> {
                                   20.0, 20.0, 20.0, 0.0),
                               child: Text(
                                 'Seguro Medico',
-                                textAlign: TextAlign.start,
+                                textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
                                       color: Color(0xFF07870C),
-                                      fontSize: 20.0,
+                                      fontSize: 26.0,
                                       fontWeight: FontWeight.w900,
                                     ),
                               ),
@@ -123,14 +123,15 @@ class _MedicosWidgetState extends State<MedicosWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 10.0, 20.0, 20.0),
                               child: Text(
-                                'Este es un producto de gastos médicos con cobertura\ninternacional para enfermedades o accidentes, \nbrinda servicios de salud a los asegurados por medio \nde un grupo de proveedores afiliados (clínicas,\nmédicos, laboratorios) en los ámbitos internacional\ny nacional; además, permite la coordinación de\nbeneficios con proveedores en el resto del mundo.',
-                                textAlign: TextAlign.start,
+                                'Este es un producto de gastos médicos con cobertura internacional para enfermedades o accidentes, brinda servicios de salud a los asegurados por medio de un grupo de proveedores afiliados (clínicas, médicos, laboratorios) en los ámbitos internacional y nacional; además, permite la coordinación de beneficios con proveedores en el resto del mundo.',
+                                textAlign: TextAlign.justify,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBtnText,
+                                      fontSize: 16.0,
                                     ),
                               ),
                             ),

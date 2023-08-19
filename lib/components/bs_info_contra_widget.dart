@@ -165,6 +165,7 @@ class _BsInfoContraWidgetState extends State<BsInfoContraWidget> {
                                       .override(
                                         fontFamily: 'Readex Pro',
                                         color: Color(0xFF07870C),
+                                        fontSize: 18.0,
                                         fontWeight: FontWeight.bold,
                                       ),
                                 ),
@@ -194,6 +195,7 @@ class _BsInfoContraWidgetState extends State<BsInfoContraWidget> {
                                       .override(
                                         fontFamily: 'Readex Pro',
                                         color: Color(0xFF07870C),
+                                        fontSize: 18.0,
                                         fontWeight: FontWeight.bold,
                                       ),
                                 ),

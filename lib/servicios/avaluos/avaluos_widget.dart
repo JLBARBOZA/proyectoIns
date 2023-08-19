@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'avaluos_model.dart';
@@ -87,6 +88,7 @@ class _AvaluosWidgetState extends State<AvaluosWidget> {
                                   20.0, 10.0, 20.0, 0.0),
                               child: Text(
                                 'Busqueda de centros de ',
+                                textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyLarge
                                     .override(
@@ -109,6 +111,7 @@ class _AvaluosWidgetState extends State<AvaluosWidget> {
                                   20.0, 0.0, 20.0, 10.0),
                               child: Text(
                                 'Estimación de Daños Vehicular',
+                                textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context)
                                     .titleMedium
                                     .override(
@@ -130,6 +133,7 @@ class _AvaluosWidgetState extends State<AvaluosWidget> {
                                   20.0, 10.0, 20.0, 10.0),
                               child: Text(
                                 'Ponemos a su disposición el siguiente documento con la lista total de Centros de Estimación de Daños',
+                                textAlign: TextAlign.justify,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -157,9 +161,8 @@ class _AvaluosWidgetState extends State<AvaluosWidget> {
                                     context.pushNamed('CentrosEstimacionPDF');
                                   },
                                   text: 'Centros de Estimación de Daños',
-                                  icon: Icon(
-                                    Icons.picture_as_pdf,
-                                    size: 15.0,
+                                  icon: FaIcon(
+                                    FontAwesomeIcons.solidFilePdf,
                                   ),
                                   options: FFButtonOptions(
                                     width: double.infinity,

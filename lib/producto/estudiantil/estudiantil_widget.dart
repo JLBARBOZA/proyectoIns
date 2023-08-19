@@ -126,12 +126,13 @@ class _EstudiantilWidgetState extends State<EstudiantilWidget> {
                                   20.0, 10.0, 20.0, 0.0),
                               child: Text(
                                 'Seguro Estudiantil',
+                                textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
                                       color: Color(0xFF07870C),
-                                      fontSize: 20.0,
+                                      fontSize: 26.0,
                                       fontWeight: FontWeight.w900,
                                     ),
                               ),
@@ -148,12 +149,14 @@ class _EstudiantilWidgetState extends State<EstudiantilWidget> {
                                   20.0, 20.0, 20.0, 20.0),
                               child: Text(
                                 'En el INS nos matriculamos a clases con sus hijos y\nlos protegemos, no solo durante su jornada lectiva,\nsino también, durante las 24 horas del día con nuestro \nSeguro Estudiantil INS Autoexpedible.',
+                                textAlign: TextAlign.justify,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBtnText,
+                                      fontSize: 14.0,
                                     ),
                               ),
                             ),
@@ -530,6 +533,8 @@ class _EstudiantilWidgetState extends State<EstudiantilWidget> {
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .accent1,
+                                                                  fontSize:
+                                                                      16.0,
                                                                 ),
                                                       ),
                                                     ),

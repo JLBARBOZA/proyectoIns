@@ -12,8 +12,6 @@ export '/autenticacion/actualizar_datos_personales/actualizar_datos_personales_w
     show ActualizarDatosPersonalesWidget;
 export '/comentarios/comentarios/comentarios_widget.dart'
     show ComentariosWidget;
-export '/nosotros/gobierno_corporativo/gobierno_corporativo_widget.dart'
-    show GobiernoCorporativoWidget;
 export '/nosotros/historia/historia_widget.dart' show HistoriaWidget;
 export '/contactenos/agentes_seguros/agentes_seguros_widget.dart'
     show AgentesSegurosWidget;
@@ -56,3 +54,39 @@ export '/nosotros/nosotros/nosotros_widget.dart' show NosotrosWidget;
 export '/nosotros/transparencia/transparencia_widget.dart'
     show TransparenciaWidget;
 export '/nosotros/info/info_widget.dart' show InfoWidget;
+export '/nosotros/digitalizacion/digitalizacion_widget.dart'
+    show DigitalizacionWidget;
+export '/nosotros/ciudadania/ciudadania_widget.dart' show CiudadaniaWidget;
+export '/nosotros/gobierno/gobierno_widget.dart' show GobiernoWidget;
+export '/nosotros/gobierno_corporativo/gobierno_corporativo_widget.dart'
+    show GobiernoCorporativoWidget;
+export '/nosotros/mision_vision/mision_vision_widget.dart'
+    show MisionVisionWidget;
+export '/nosotros/organigrama/organigrama_widget.dart' show OrganigramaWidget;
+export '/nosotros/descripcion_p_d_f/descripcion_p_d_f_widget.dart'
+    show DescripcionPDFWidget;
+export '/nosotros/organigrama_p_d_f/organigrama_p_d_f_widget.dart'
+    show OrganigramaPDFWidget;
+export '/nosotros/informe/informe_widget.dart' show InformeWidget;
+export '/nosotros/informe2022_p_d_f/informe2022_p_d_f_widget.dart'
+    show Informe2022PDFWidget;
+export '/nosotros/informe2021_p_d_f/informe2021_p_d_f_widget.dart'
+    show Informe2021PDFWidget;
+export '/nosotros/informe2020_p_d_f/informe2020_p_d_f_widget.dart'
+    show Informe2020PDFWidget;
+export '/nosotros/informe2018_p_d_f/informe2018_p_d_f_widget.dart'
+    show Informe2018PDFWidget;
+export '/nosotros/informe2019_p_d_f/informe2019_p_d_f_widget.dart'
+    show Informe2019PDFWidget;
+export '/nosotros/rendicion_cuentas/rendicion_cuentas_widget.dart'
+    show RendicionCuentasWidget;
+export '/nosotros/rendicion2022_p_d_f/rendicion2022_p_d_f_widget.dart'
+    show Rendicion2022PDFWidget;
+export '/nosotros/rendicion2021_p_d_f/rendicion2021_p_d_f_widget.dart'
+    show Rendicion2021PDFWidget;
+export '/nosotros/rendicion2020_p_d_f/rendicion2020_p_d_f_widget.dart'
+    show Rendicion2020PDFWidget;
+export '/nosotros/rendicion2019_p_d_f/rendicion2019_p_d_f_widget.dart'
+    show Rendicion2019PDFWidget;
+export '/nosotros/rendicion2018_p_d_f/rendicion2018_p_d_f_widget.dart'
+    show Rendicion2018PDFWidget;

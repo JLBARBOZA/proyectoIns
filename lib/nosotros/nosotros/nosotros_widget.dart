@@ -99,12 +99,14 @@ class _NosotrosWidgetState extends State<NosotrosWidget> {
                                   20.0, 20.0, 20.0, 20.0),
                               child: Text(
                                 'Nosotros',
+                                textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
                                       color: Color(0xFF07870C),
-                                      fontSize: 25.0,
+                                      fontSize: 26.0,
+                                      fontWeight: FontWeight.w900,
                                     ),
                               ),
                             ),

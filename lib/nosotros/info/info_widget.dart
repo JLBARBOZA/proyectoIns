@@ -102,12 +102,14 @@ class _InfoWidgetState extends State<InfoWidget> {
                                   20.0, 20.0, 20.0, 0.0),
                               child: Text(
                                 'Acceso a la información',
+                                textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
                                       color: Color(0xFF07870C),
-                                      fontSize: 20.0,
+                                      fontSize: 26.0,
+                                      fontWeight: FontWeight.w900,
                                     ),
                               ),
                             ),
@@ -122,13 +124,15 @@ class _InfoWidgetState extends State<InfoWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 20.0),
                               child: Text(
-                                'La información consignada en esta sección responde a la garantía del INS sobre el derecho constitucional y humano del acceso a la información de nuestra institución.\nIncluye información sobre el quehacer de la institución, su razón de ser y sus funciones generales, entre otras.\n\nHogar Plan Base, la cual es de gran ayuda cuando \nrequiera fontanería, cerrajería, electricidad y \nmucho más.',
+                                'La información consignada en esta sección responde a la garantía del INS sobre el derecho constitucional y humano del acceso a la información de nuestra institución.\nIncluye información sobre el quehacer de la institución, su razón de ser y sus funciones generales, entre otras. \n\nHogar Plan Base, la cual es de gran ayuda cuando \nrequiera fontanería, cerrajería, electricidad y \nmucho más.',
+                                textAlign: TextAlign.justify,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBtnText,
+                                      fontSize: 16.0,
                                     ),
                               ),
                             ),

@@ -107,7 +107,8 @@ class _TransparenciaWidgetState extends State<TransparenciaWidget> {
                                       .override(
                                         fontFamily: 'Outfit',
                                         color: Color(0xFF07870C),
-                                        fontSize: 25.0,
+                                        fontSize: 26.0,
+                                        fontWeight: FontWeight.w900,
                                       ),
                                 ),
                               ),
@@ -222,9 +223,9 @@ class _TransparenciaWidgetState extends State<TransparenciaWidget> {
                                           alignment:
                                               AlignmentDirectional(0.0, 0.98),
                                           child: FFButtonWidget(
-                                            onPressed: () {
-                                              print(
-                                                  'transformacion pressed ...');
+                                            onPressed: () async {
+                                              context
+                                                  .pushNamed('digitalizacion');
                                             },
                                             text: 'Digitalización',
                                             options: FFButtonOptions(

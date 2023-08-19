@@ -107,12 +107,14 @@ class _ViajeWidgetState extends State<ViajeWidget> {
                                   20.0, 20.0, 20.0, 0.0),
                               child: Text(
                                 'Seguro de viajes',
+                                textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
                                       color: Color(0xFF07870C),
-                                      fontSize: 20.0,
+                                      fontSize: 26.0,
+                                      fontWeight: FontWeight.w900,
                                     ),
                               ),
                             ),
@@ -138,7 +140,8 @@ class _ViajeWidgetState extends State<ViajeWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           20.0, 20.0, 20.0, 20.0),
                                       child: Text(
-                                        'Costa Rica da la bienvenida a los nómadas digitales \nque buscan trabajar desde nuestro país, en sitios \naltamente flexibles que les brindaran un entorno \nproductivo.',
+                                        'Costa Rica da la bienvenida a los nómadas digitales que buscan trabajar desde nuestro país, en sitios altamente flexibles que les brindaran un entorno productivo.',
+                                        textAlign: TextAlign.justify,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -146,6 +149,7 @@ class _ViajeWidgetState extends State<ViajeWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .primaryBtnText,
+                                              fontSize: 16.0,
                                             ),
                                       ),
                                     ),

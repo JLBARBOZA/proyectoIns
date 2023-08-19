@@ -127,11 +127,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => ComentariosWidget(),
         ),
         FFRoute(
-          name: 'gobiernoCorporativo',
-          path: '/gobiernoCorporativo',
-          builder: (context, params) => GobiernoCorporativoWidget(),
-        ),
-        FFRoute(
           name: 'historia',
           path: '/historia',
           builder: (context, params) => HistoriaWidget(),
@@ -266,6 +261,106 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'info',
           path: '/info',
           builder: (context, params) => InfoWidget(),
+        ),
+        FFRoute(
+          name: 'digitalizacion',
+          path: '/digitalizacion',
+          builder: (context, params) => DigitalizacionWidget(),
+        ),
+        FFRoute(
+          name: 'ciudadania',
+          path: '/ciudadania',
+          builder: (context, params) => CiudadaniaWidget(),
+        ),
+        FFRoute(
+          name: 'gobierno',
+          path: '/gobierno',
+          builder: (context, params) => GobiernoWidget(),
+        ),
+        FFRoute(
+          name: 'gobiernoCorporativo',
+          path: '/gobiernoCorporativo',
+          builder: (context, params) => GobiernoCorporativoWidget(),
+        ),
+        FFRoute(
+          name: 'mision-vision',
+          path: '/misionVision',
+          builder: (context, params) => MisionVisionWidget(),
+        ),
+        FFRoute(
+          name: 'organigrama',
+          path: '/organigrama',
+          builder: (context, params) => OrganigramaWidget(),
+        ),
+        FFRoute(
+          name: 'descripcionPDF',
+          path: '/descripcionPDF',
+          builder: (context, params) => DescripcionPDFWidget(),
+        ),
+        FFRoute(
+          name: 'organigramaPDF',
+          path: '/organigramaPDF',
+          builder: (context, params) => OrganigramaPDFWidget(),
+        ),
+        FFRoute(
+          name: 'informe',
+          path: '/informe',
+          builder: (context, params) => InformeWidget(),
+        ),
+        FFRoute(
+          name: 'informe2022PDF',
+          path: '/informe2022PDF',
+          builder: (context, params) => Informe2022PDFWidget(),
+        ),
+        FFRoute(
+          name: 'informe2021PDF',
+          path: '/informe2021PDF',
+          builder: (context, params) => Informe2021PDFWidget(),
+        ),
+        FFRoute(
+          name: 'informe2020PDF',
+          path: '/informe2020PDF',
+          builder: (context, params) => Informe2020PDFWidget(),
+        ),
+        FFRoute(
+          name: 'informe2018PDF',
+          path: '/informe2018PDF',
+          builder: (context, params) => Informe2018PDFWidget(),
+        ),
+        FFRoute(
+          name: 'informe2019PDF',
+          path: '/informe2019PDF',
+          builder: (context, params) => Informe2019PDFWidget(),
+        ),
+        FFRoute(
+          name: 'rendicionCuentas',
+          path: '/rendicionCuentas',
+          builder: (context, params) => RendicionCuentasWidget(),
+        ),
+        FFRoute(
+          name: 'rendicion2022PDF',
+          path: '/rendicion2022PDF',
+          builder: (context, params) => Rendicion2022PDFWidget(),
+        ),
+        FFRoute(
+          name: 'rendicion2021PDF',
+          path: '/rendicion2021PDF',
+          builder: (context, params) => Rendicion2021PDFWidget(),
+        ),
+        FFRoute(
+          name: 'rendicion2020PDF',
+          path: '/rendicion2020PDF',
+          builder: (context, params) => Rendicion2020PDFWidget(),
+        ),
+        FFRoute(
+          name: 'rendicion2019PDF',
+          path: '/rendicion2019PDF',
+          builder: (context, params) => Rendicion2019PDFWidget(),
+        ),
+        FFRoute(
+          name: 'rendicion2018PDF',
+          path: '/rendicion2018PDF',
+          builder: (context, params) => Rendicion2018PDFWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],

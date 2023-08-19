@@ -108,12 +108,14 @@ class _RobosWidgetState extends State<RobosWidget> {
                                   20.0, 20.0, 20.0, 0.0),
                               child: Text(
                                 'Seguro contra robos',
+                                textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
                                       color: Color(0xFF07870C),
-                                      fontSize: 20.0,
+                                      fontSize: 26.0,
+                                      fontWeight: FontWeight.w900,
                                     ),
                               ),
                             ),
@@ -128,13 +130,15 @@ class _RobosWidgetState extends State<RobosWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 20.0),
                               child: Text(
-                                'Hágale frente a esta realidad con nuestro Seguro \nde Robo Unidad Habitacional, que le brinda la \noportunidad de proteger su inversión y recuperarla,\nen caso de ser víctima del hampa. Este seguro cubre \ntanto la pérdida de bienes como los daños ocasionados \na la vivienda, por el intento y/o robo.\n\nEl seguro incluye, la cobertura de Multiasistencia\nHogar Plan Base, la cual es de gran ayuda cuando \nrequiera fontanería, cerrajería, electricidad y \nmucho más.',
+                                'Hágale frente a esta realidad con nuestro Seguro de Robo Unidad Habitacional, que le brinda la  oportunidad de proteger su inversión y recuperarla,\nen caso de ser víctima del hampa. Este seguro cubre tanto la pérdida de bienes como los daños ocasionados a la vivienda, por el intento y/o robo.\n\nEl seguro incluye, la cobertura de Multiasistencia\nHogar Plan Base, la cual es de gran ayuda cuando \nrequiera fontanería, cerrajería, electricidad y \nmucho más.',
+                                textAlign: TextAlign.justify,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBtnText,
+                                      fontSize: 16.0,
                                     ),
                               ),
                             ),
