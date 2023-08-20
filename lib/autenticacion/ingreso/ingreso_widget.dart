@@ -148,7 +148,7 @@ class _IngresoWidgetState extends State<IngresoWidget> {
                                             ),
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
-                                            color: Color(0xFFF1F4F8),
+                                            color: Color(0xFF07870C),
                                             width: 2.0,
                                           ),
                                           borderRadius:
@@ -185,7 +185,7 @@ class _IngresoWidgetState extends State<IngresoWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Plus Jakarta Sans',
-                                            color: Color(0xFF101213),
+                                            color: Color(0xFF57636C),
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.w500,
                                           ),
@@ -218,7 +218,7 @@ class _IngresoWidgetState extends State<IngresoWidget> {
                                             ),
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
-                                            color: Color(0xFFF1F4F8),
+                                            color: Color(0xFF07870C),
                                             width: 2.0,
                                           ),
                                           borderRadius:
@@ -261,7 +261,7 @@ class _IngresoWidgetState extends State<IngresoWidget> {
                                             _model.passwordVisibility
                                                 ? Icons.visibility_outlined
                                                 : Icons.visibility_off_outlined,
-                                            color: Color(0xFF57636C),
+                                            color: Colors.black,
                                             size: 24.0,
                                           ),
                                         ),
@@ -270,7 +270,7 @@ class _IngresoWidgetState extends State<IngresoWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Plus Jakarta Sans',
-                                            color: Color(0xFF101213),
+                                            color: Color(0xFF57636C),
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.w500,
                                           ),
@@ -403,12 +403,11 @@ class _IngresoWidgetState extends State<IngresoWidget> {
                                       text: TextSpan(
                                         children: [
                                           TextSpan(
-                                            text: 'Cuenta Insegura? ',
+                                            text: 'Olvidaste tu contraseña? ',
                                             style: TextStyle(),
                                           ),
                                           TextSpan(
-                                            text:
-                                                'Actualiza tu contraseña aqui',
+                                            text: 'Actualiza Aqui',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(

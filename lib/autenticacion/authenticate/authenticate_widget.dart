@@ -69,7 +69,7 @@ class _AuthenticateWidgetState extends State<AuthenticateWidget>
       onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).tertiary,
+        backgroundColor: FlutterFlowTheme.of(context).secondaryText,
         body: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(0.0, 70.0, 0.0, 0.0),
           child: Column(
@@ -99,7 +99,7 @@ class _AuthenticateWidgetState extends State<AuthenticateWidget>
                       child: FlutterFlowButtonTabBar(
                         useToggleButtonStyle: false,
                         isScrollable: true,
-                        labelStyle: FlutterFlowTheme.of(context).titleMedium,
+                        labelStyle: FlutterFlowTheme.of(context).titleLarge,
                         unselectedLabelStyle: TextStyle(),
                         labelColor: FlutterFlowTheme.of(context).primaryBtnText,
                         unselectedLabelColor: Color(0x69000000),

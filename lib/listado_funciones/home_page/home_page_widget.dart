@@ -2,6 +2,7 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -45,32 +46,32 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           child: AppBar(
             backgroundColor: Colors.black,
             automaticallyImplyLeading: false,
-            actions: [
-              Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 10.0, 0.0),
-                  child: InkWell(
-                    splashColor: Colors.transparent,
-                    focusColor: Colors.transparent,
-                    hoverColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    onTap: () async {
-                      GoRouter.of(context).prepareAuthEvent();
-                      await authManager.signOut();
-                      GoRouter.of(context).clearRedirectLocation();
-
-                      context.goNamedAuth('Ingreso', context.mounted);
-                    },
-                    child: Icon(
-                      Icons.exit_to_app,
-                      color: FlutterFlowTheme.of(context).primaryBtnText,
-                      size: 30.0,
+            leading: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+              child: AuthUserStreamWidget(
+                builder: (context) => Container(
+                  width: MediaQuery.sizeOf(context).width * 0.15,
+                  height: MediaQuery.sizeOf(context).height * 0.15,
+                  child: custom_widgets.DatosUsuario(
+                    width: MediaQuery.sizeOf(context).width * 0.15,
+                    height: MediaQuery.sizeOf(context).height * 0.15,
+                    nombre: currentUserDisplayName,
+                    email: currentUserEmail,
+                    edad: valueOrDefault<String>(
+                      valueOrDefault(currentUserDocument?.edad, 0).toString(),
+                      '0',
                     ),
+                    identificacion: valueOrDefault<String>(
+                      valueOrDefault(currentUserDocument?.cedula, 0).toString(),
+                      '0',
+                    ),
+                    actionUno: () async {},
+                    actionDos: () async {},
                   ),
                 ),
               ),
-            ],
+            ),
+            actions: [],
             flexibleSpace: FlexibleSpaceBar(
               background: ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),

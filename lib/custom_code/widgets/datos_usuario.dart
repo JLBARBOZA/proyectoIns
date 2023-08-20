@@ -96,12 +96,14 @@ class _DatosUsuarioState extends State<DatosUsuario> {
           );
         },
 
-        child: Icon(Icons.person),
+        child: Icon(
+          Icons.dehaze_sharp,
+          color: Colors.white,
+        ),
         style: IconButton.styleFrom(
-          shape: CircleBorder(),
-
           alignment: Alignment.center,
-
+          backgroundColor: Colors.transparent,
+          iconSize: 40.0,
           //shape: StadiumBorder(),
         ),
         //child: null,
