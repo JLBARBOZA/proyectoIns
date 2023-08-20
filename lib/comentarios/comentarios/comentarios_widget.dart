@@ -1,6 +1,9 @@
+import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -25,7 +28,7 @@ class _ComentariosWidgetState extends State<ComentariosWidget> {
     _model = createModel(context, () => ComentariosModel());
 
     _model.usuarioNombreController ??= TextEditingController();
-    _model.textController2 ??= TextEditingController();
+    _model.txtComentarioController ??= TextEditingController();
   }
 
   @override
@@ -59,7 +62,7 @@ class _ComentariosWidgetState extends State<ComentariosWidget> {
                 hoverColor: Colors.transparent,
                 highlightColor: Colors.transparent,
                 onTap: () async {
-                  context.safePop();
+                  context.pushNamed('HomePage');
                 },
                 child: Icon(
                   Icons.arrow_back,
@@ -196,7 +199,7 @@ class _ComentariosWidgetState extends State<ComentariosWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               15.0, 15.0, 15.0, 15.0),
                           child: TextFormField(
-                            controller: _model.textController2,
+                            controller: _model.txtComentarioController,
                             autofocus: true,
                             obscureText: false,
                             decoration: InputDecoration(
@@ -255,7 +258,7 @@ class _ComentariosWidgetState extends State<ComentariosWidget> {
                                 ),
                             maxLines: 5,
                             cursorColor: Color(0xFF07870C),
-                            validator: _model.textController2Validator
+                            validator: _model.txtComentarioControllerValidator
                                 .asValidator(context),
                           ),
                         ),
@@ -263,8 +266,14 @@ class _ComentariosWidgetState extends State<ComentariosWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 16.0),
                           child: FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
+                            onPressed: () async {
+                              await ComentariosRecord.collection
+                                  .doc()
+                                  .set(createComentariosRecordData(
+                                    nombre: _model.usuarioNombreController.text,
+                                    mensaje:
+                                        _model.txtComentarioController.text,
+                                  ));
                             },
                             text: 'Comentar',
                             options: FFButtonOptions(

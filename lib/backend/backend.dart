@@ -16,6 +16,7 @@ import 'schema/sociedades_seguros_record.dart';
 import 'schema/operadores_record.dart';
 import 'schema/users_record.dart';
 import 'schema/cotizacion_record.dart';
+import 'schema/comentarios_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart';
@@ -34,6 +35,7 @@ export 'schema/sociedades_seguros_record.dart';
 export 'schema/operadores_record.dart';
 export 'schema/users_record.dart';
 export 'schema/cotizacion_record.dart';
+export 'schema/comentarios_record.dart';
 
 /// Functions to query SedesMenuRecords (as a Stream and as a Future).
 Future<int> querySedesMenuRecordCount({
@@ -437,6 +439,43 @@ Future<List<CotizacionRecord>> queryCotizacionRecordOnce({
     queryCollectionOnce(
       CotizacionRecord.collection,
       CotizacionRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query ComentariosRecords (as a Stream and as a Future).
+Future<int> queryComentariosRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      ComentariosRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<ComentariosRecord>> queryComentariosRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      ComentariosRecord.collection,
+      ComentariosRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<ComentariosRecord>> queryComentariosRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      ComentariosRecord.collection,
+      ComentariosRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,
