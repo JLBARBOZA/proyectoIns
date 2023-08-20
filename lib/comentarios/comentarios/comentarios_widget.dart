@@ -200,7 +200,7 @@ class _ComentariosWidgetState extends State<ComentariosWidget> {
                             autofocus: true,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Cometarios',
+                              labelText: 'Comentarios',
                               labelStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(

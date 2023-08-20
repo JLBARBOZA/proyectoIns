@@ -54,9 +54,15 @@ class _ResetPWidgetState extends State<ResetPWidget> {
                 obscureText: false,
                 decoration: InputDecoration(
                   labelText: 'Email',
-                  labelStyle: FlutterFlowTheme.of(context).labelMedium,
+                  labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                        fontFamily: 'Readex Pro',
+                        color: Colors.white,
+                      ),
                   hintText: 'Ingrese el correo de la cuenta ',
-                  hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                  hintStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                        fontFamily: 'Readex Pro',
+                        color: Colors.white,
+                      ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Colors.black,
@@ -85,6 +91,8 @@ class _ResetPWidgetState extends State<ResetPWidget> {
                     ),
                     borderRadius: BorderRadius.circular(100.0),
                   ),
+                  filled: true,
+                  fillColor: Color(0xFF07870C),
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium,
                 keyboardType: TextInputType.emailAddress,
