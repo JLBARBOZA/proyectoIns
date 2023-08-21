@@ -33,6 +33,7 @@ dependencies:
   device_info_plus: 8.0.0
   device_info_plus_platform_interface: 7.0.0
   download: ^1.0.0
+  dropdown_button2: 2.0.0
   easy_debounce: 2.0.1
   firebase_auth: 4.6.2
   firebase_auth_platform_interface: 6.15.2

@@ -261,8 +261,8 @@ class _MedicosWidgetState extends State<MedicosWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Readex Pro',
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .info,
+                                                                        color: Color(
+                                                                            0xFF07870C),
                                                                       ),
                                                                 ),
                                                               ],
@@ -394,8 +394,8 @@ class _MedicosWidgetState extends State<MedicosWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Readex Pro',
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .info,
+                                                                        color: Color(
+                                                                            0xFF07870C),
                                                                       ),
                                                                 ),
                                                               ],
@@ -527,8 +527,8 @@ class _MedicosWidgetState extends State<MedicosWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Readex Pro',
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .info,
+                                                                        color: Color(
+                                                                            0xFF07870C),
                                                                       ),
                                                                 ),
                                                               ],
@@ -660,8 +660,8 @@ class _MedicosWidgetState extends State<MedicosWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Readex Pro',
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .info,
+                                                                        color: Color(
+                                                                            0xFF07870C),
                                                                       ),
                                                                 ),
                                                               ],
@@ -793,8 +793,8 @@ class _MedicosWidgetState extends State<MedicosWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Readex Pro',
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .info,
+                                                                        color: Color(
+                                                                            0xFF07870C),
                                                                       ),
                                                                 ),
                                                               ],
@@ -926,8 +926,8 @@ class _MedicosWidgetState extends State<MedicosWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Readex Pro',
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .info,
+                                                                        color: Color(
+                                                                            0xFF07870C),
                                                                       ),
                                                                 ),
                                                               ],

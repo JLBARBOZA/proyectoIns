@@ -1,8 +1,10 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/form_field_controller.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
@@ -35,7 +37,6 @@ class _CotizacionWidgetState extends State<CotizacionWidget> {
     _model.textController3 ??= TextEditingController();
     _model.textController4 ??= TextEditingController();
     _model.textController5 ??= TextEditingController();
-    _model.textController6 ??= TextEditingController();
   }
 
   @override
@@ -664,74 +665,60 @@ class _CotizacionWidgetState extends State<CotizacionWidget> {
                             ),
                           ],
                         ),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Expanded(
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    8.0, 0.0, 8.0, 0.0),
-                                child: TextFormField(
-                                  controller: _model.textController6,
-                                  autofocus: true,
-                                  obscureText: false,
-                                  decoration: InputDecoration(
-                                    labelText:
-                                        'Digite el seguro que desea cotizar',
-                                    labelStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryBtnText,
-                                        ),
-                                    hintStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium,
-                                    enabledBorder: UnderlineInputBorder(
-                                      borderSide: BorderSide(
+                        Expanded(
+                          child: Align(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Expanded(
+                                  child: Align(
+                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    child: FlutterFlowDropDown<String>(
+                                      controller:
+                                          _model.seguroValueController ??=
+                                              FormFieldController<String>(null),
+                                      options: [
+                                        'Seguro Medico',
+                                        'Seguro Estudiantil',
+                                        'Seguro contra Robos',
+                                        'Seguro de viajes '
+                                      ],
+                                      onChanged: (val) => setState(
+                                          () => _model.seguroValue = val),
+                                      width: 300.0,
+                                      height: 50.0,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryBtnText,
+                                          ),
+                                      hintText: 'Selecciona un seguro',
+                                      icon: Icon(
+                                        Icons.keyboard_arrow_down_rounded,
                                         color: FlutterFlowTheme.of(context)
-                                            .alternate,
-                                        width: 2.0,
+                                            .primaryBtnText,
+                                        size: 24.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8.0),
-                                    ),
-                                    focusedBorder: UnderlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primary,
-                                        width: 2.0,
-                                      ),
-                                      borderRadius: BorderRadius.circular(8.0),
-                                    ),
-                                    errorBorder: UnderlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color:
-                                            FlutterFlowTheme.of(context).error,
-                                        width: 2.0,
-                                      ),
-                                      borderRadius: BorderRadius.circular(8.0),
-                                    ),
-                                    focusedErrorBorder: UnderlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color:
-                                            FlutterFlowTheme.of(context).error,
-                                        width: 2.0,
-                                      ),
-                                      borderRadius: BorderRadius.circular(8.0),
+                                      fillColor: Color(0xFF07870C),
+                                      elevation: 2.0,
+                                      borderColor: FlutterFlowTheme.of(context)
+                                          .alternate,
+                                      borderWidth: 2.0,
+                                      borderRadius: 8.0,
+                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                          16.0, 4.0, 16.0, 4.0),
+                                      hidesUnderline: true,
+                                      isSearchable: false,
+                                      isMultiSelect: false,
                                     ),
                                   ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Readex Pro',
-                                        color: Colors.white,
-                                      ),
-                                  validator: _model.textController6Validator
-                                      .asValidator(context),
                                 ),
-                              ),
+                              ],
                             ),
-                          ],
+                          ),
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.max,
@@ -855,9 +842,7 @@ class _CotizacionWidgetState extends State<CotizacionWidget> {
                                                                 context)
                                                             .accent3,
                                                     activeDotColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .success,
+                                                        Color(0xFF07870C),
                                                     paintStyle:
                                                         PaintingStyle.fill,
                                                   ),
@@ -894,7 +879,7 @@ class _CotizacionWidgetState extends State<CotizacionWidget> {
                                         celular: int.tryParse(
                                             _model.textController4.text),
                                         correo: _model.textController5.text,
-                                        seguro: _model.textController6.text,
+                                        seguro: _model.seguroValue,
                                       ));
                                   await actions.cotizacionPdf(
                                     cotizacionCotizacionRecord!,

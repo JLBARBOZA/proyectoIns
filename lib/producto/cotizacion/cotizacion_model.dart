@@ -1,8 +1,10 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/form_field_controller.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
@@ -30,9 +32,9 @@ class CotizacionModel extends FlutterFlowModel {
   // State field(s) for TextField widget.
   TextEditingController? textController5;
   String? Function(BuildContext, String?)? textController5Validator;
-  // State field(s) for TextField widget.
-  TextEditingController? textController6;
-  String? Function(BuildContext, String?)? textController6Validator;
+  // State field(s) for Seguro widget.
+  String? seguroValue;
+  FormFieldController<String>? seguroValueController;
   // State field(s) for PageView widget.
   PageController? pageViewController;
 
@@ -53,7 +55,6 @@ class CotizacionModel extends FlutterFlowModel {
     textController3?.dispose();
     textController4?.dispose();
     textController5?.dispose();
-    textController6?.dispose();
   }
 
   /// Action blocks are added here.
