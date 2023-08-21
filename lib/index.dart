@@ -26,8 +26,6 @@ export '/producto/estudiantil/estudiantil_widget.dart' show EstudiantilWidget;
 export '/producto/medicos/medicos_widget.dart' show MedicosWidget;
 export '/producto/viaje/viaje_widget.dart' show ViajeWidget;
 export '/servicios/servicios/servicios_widget.dart' show ServiciosWidget;
-export '/listado_funciones/home_page_copy/home_page_copy_widget.dart'
-    show HomePageCopyWidget;
 export '/producto/cotizacion/cotizacion_widget.dart' show CotizacionWidget;
 export '/producto/cotizacion_confirma/cotizacion_confirma_widget.dart'
     show CotizacionConfirmaWidget;

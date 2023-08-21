@@ -177,11 +177,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => ServiciosWidget(),
         ),
         FFRoute(
-          name: 'HomePageCopy',
-          path: '/homePageCopy',
-          builder: (context, params) => HomePageCopyWidget(),
-        ),
-        FFRoute(
           name: 'Cotizacion',
           path: '/cotizacion',
           builder: (context, params) => CotizacionWidget(),

@@ -853,11 +853,11 @@ class _CotizacionWidgetState extends State<CotizacionWidget> {
                                                     dotColor:
                                                         FlutterFlowTheme.of(
                                                                 context)
-                                                            .tertiary,
+                                                            .accent3,
                                                     activeDotColor:
                                                         FlutterFlowTheme.of(
                                                                 context)
-                                                            .primary,
+                                                            .success,
                                                     paintStyle:
                                                         PaintingStyle.fill,
                                                   ),

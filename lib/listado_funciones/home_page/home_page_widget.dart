@@ -65,8 +65,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       valueOrDefault(currentUserDocument?.cedula, 0).toString(),
                       '0',
                     ),
-                    actionUno: () async {},
-                    actionDos: () async {},
+                    actionUno: () async {
+                      context.pushNamed('actualizarDatosPersonales');
+                    },
+                    actionDos: () async {
+                      GoRouter.of(context).prepareAuthEvent();
+                      await authManager.signOut();
+                      GoRouter.of(context).clearRedirectLocation();
+
+                      context.goNamedAuth('Ingreso', context.mounted);
+                    },
                   ),
                 ),
               ),
